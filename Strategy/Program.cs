@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Strategy
+namespace SimUDuck
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("~~~~~~~~~~~~ Begin Strategy Pattern ~~~~~~~~~~~~\r\n");
+            Console.WriteLine("~~~~~~~~~~~~ Begin SimUDuck ~~~~~~~~~~~~\r\n");
 
             Duck mallard = new MallardDuck("Mallard");
             Duck redhead = new RedheadDuck("Redhead");

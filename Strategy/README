@@ -1,4 +1,4 @@
-﻿Strategy Pattern (SimUDuck)
+﻿SimUDuck Strategy Pattern
 ================
 * p. 3: Joe adds the flying duck behavior using inheritance (genius!).
 * p. 4: FAIL: RubberDucks should not fly, so inheritance is not the answer.
