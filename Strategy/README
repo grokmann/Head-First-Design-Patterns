@@ -1,6 +1,8 @@
 ﻿SimUDuck Strategy Pattern
 ================
 
+*The Strategy Pattern* defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+
 Relevant OO Principles
 -------------------
 1. Encapsulate what varies.
@@ -22,3 +24,7 @@ Refactoring Steps
   * Make a new duck type (ModelDuck)
   * Make a new FlyBehavior type (FlyRocketPowered)
   * Change the test class (MiniDuckSimulator), add the ModelDuck, and make the ModelDuck rocket-enabled.
+
+Lessons
+-------
+* HAS-A (_composition_) can be better than IS-A (_inheritance_).
