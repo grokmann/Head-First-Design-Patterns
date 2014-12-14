@@ -10,25 +10,30 @@ namespace Strategy
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(@"~~~~~~~~~~~~ Begin Strategy Pattern ~~~~~~~~~~~~");
+            Console.WriteLine("~~~~~~~~~~~~ Begin Strategy Pattern ~~~~~~~~~~~~\r\n");
 
             Duck mallard = new MallardDuck();
             Duck redhead = new RedheadDuck();
             Duck rubber = new RubberDuck();
 
-            mallard.quack();
-            redhead.quack();
-            rubber.quack();
+            Console.WriteLine("\t+++ Begin mallard duck simulation +++");
+            RunSimulation(mallard);
 
-            mallard.display();
-            redhead.display();
-            rubber.display();
+            Console.WriteLine("\t+++ Begin redhead duck simulation +++");
+            RunSimulation(redhead);
 
-            mallard.fly();
-            redhead.fly();
-            rubber.fly(); //rubber ducks should *not* fly
+            Console.WriteLine("\t+++ Begin rubber duck simulation +++");
+            RunSimulation(rubber); //rubber ducks should *not* fly
 
             Console.ReadKey();
+        }
+
+        static public void RunSimulation(Duck duck)
+        {
+            duck.quack();
+            duck.display();
+            duck.fly();
+            Console.WriteLine();
         }
     }
 }
