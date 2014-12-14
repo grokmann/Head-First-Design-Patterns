@@ -3,19 +3,14 @@ using System;
 
 namespace SimUDuck.Ducks
 {
-    abstract class Duck
+    public abstract class Duck
     {
         public string name { get; set; }
         public IFlyBehavior flyBehavior;
         public IQuackBehavior quackBehavior;
 
-        public virtual void performQuack() {
-            quackBehavior.quack();
-        }
-
-        public void swim()
+        public Duck()
         {
-            Console.WriteLine(name + " swims!");
         }
 
         public abstract void display();
@@ -23,6 +18,16 @@ namespace SimUDuck.Ducks
         public void performFly()
         {
             flyBehavior.fly();
+        }
+        
+        public void performQuack()
+        {
+            quackBehavior.quack();
+        }
+
+        public void swim() 
+        {
+            Console.WriteLine("All ducks float, even decoys!");
         }
     }
 }
