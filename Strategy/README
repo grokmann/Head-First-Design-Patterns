@@ -1,5 +1,13 @@
 ﻿SimUDuck Strategy Pattern
 ================
+
+Relevant OO Principles
+-------------------
+1. Encapsulate what varies.
+2. Program to interfaces, not implementations.
+
+Refactoring Steps
+-----
 * p. 3: Joe adds the flying duck behavior using inheritance (genius!).
 * p. 4: FAIL: RubberDucks should not fly, so inheritance is not the answer.
 * p. 6: Joe proposes a flying interface, but this means the flying behavior is not reusable, and needs to be maintained separately across every Duck subclass.
