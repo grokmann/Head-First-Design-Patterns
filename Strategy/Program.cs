@@ -21,6 +21,9 @@ namespace Strategy
             mallard.display();
             redhead.display();
 
+            mallard.fly();
+            redhead.fly();
+
             Console.ReadKey();
         }
     }

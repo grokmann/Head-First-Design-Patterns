@@ -18,6 +18,11 @@ namespace Strategy
         }
 
         public abstract void display();
+
+        public void fly()
+        {
+            Console.WriteLine("Duck flies!");
+        }
     }
 
     class MallardDuck : Duck
