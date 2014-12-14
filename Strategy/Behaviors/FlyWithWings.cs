@@ -2,11 +2,11 @@
 
 namespace SimUDuck.Behaviors
 {
-    class FlyWithWings : IFlyBehavior
+    public class FlyWithWings : IFlyBehavior
     {
         public void fly()
         {
-            Console.WriteLine("This duck is flying!");
+            Console.WriteLine("I'm flying!!");
         }
     }
 }
