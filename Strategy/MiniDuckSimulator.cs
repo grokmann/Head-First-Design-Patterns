@@ -3,7 +3,7 @@ using System;
 
 namespace SimUDuck
 {
-    class Program
+    class MiniDuckSimulator
     {
         static void Main(string[] args)
         {
