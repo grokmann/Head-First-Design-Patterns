@@ -13,6 +13,16 @@ namespace SimUDuck.Ducks
         {
         }
 
+        public void setFlyBehavior(IFlyBehavior fb)
+        {
+            flyBehavior = fb;
+        }
+
+        public void setQuackBehavior(IQuackBehavior qb)
+        {
+            quackBehavior = qb;
+        }
+
         public abstract void display();
 
         public void performFly()

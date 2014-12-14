@@ -14,4 +14,11 @@ Refactoring Steps
 * p. 10: Need to pull the fly() and quack() methods (the behaviors that vary with each subclass) _out_ of the Duck class and into their own classes.
 * p. 15: Add two instance variables for behaviors
 * p. 15: Implement performQuack()
-* p. 16-17: set flyBehavior and quackBehavior instance variables (in constructor--not ideal because we are still programming to concrete implementationm, but this can be changed to dynamically assign different behavior at runtime)
+* p. 16-17
+  * Set flyBehavior and quackBehavior instance variables
+  * Set in constructor--not ideal because we are still programming to concrete implementationm, but this can be changed to dynamically assign different behavior at runtime)
+* p. 20-21 Setting behavior dynamically
+  * Add two new methods to the Duck class
+  * Make a new duck type (ModelDuck)
+  * Make a new FlyBehavior type (FlyRocketPowered)
+  * Change the test class (MiniDuckSimulator), add the ModelDuck, and make the ModelDuck rocket-enabled.

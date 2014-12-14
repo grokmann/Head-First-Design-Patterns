@@ -1,4 +1,5 @@
-﻿using SimUDuck.Ducks;
+﻿using SimUDuck.Behaviors;
+using SimUDuck.Ducks;
 using System;
 
 namespace SimUDuck
@@ -12,12 +13,18 @@ namespace SimUDuck
             Duck mallard = new MallardDuck("Mallard");
             Duck redhead = new RedheadDuck("Redhead");
             Duck rubber = new RubberDuck("Rubber Ducky");
-
+            Duck model = new ModelDuck();
+            
             RunSimulation(mallard);
 
             RunSimulation(redhead);
 
             RunSimulation(rubber); //rubber ducks should *not* fly
+
+            RunSimulation(model);
+            model.setFlyBehavior(new FlyRocketPowered());
+            Console.WriteLine("ModelDuck fly behavior reset.");
+            RunSimulation(model);
 
             Console.ReadKey();
         }
