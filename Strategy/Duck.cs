@@ -6,26 +6,23 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    class Duck
+    abstract class Duck
     {
         public void quack() {
-            Console.Write("Quack!");
+            Console.WriteLine("Quack!");
         }
 
         public void swim()
         {
-            Console.Write("Duck swims!");
+            Console.WriteLine("Duck swims!");
         }
 
-        public void display()
-        {
-            Console.WriteLine("Duck displays!");
-        }
+        public abstract void display();
     }
 
     class MallardDuck : Duck
     {
-        public void display()
+        public override void display()
         {
             Console.WriteLine("MallardDuck displays!");
         }
@@ -33,7 +30,7 @@ namespace Strategy
 
     class RedheadDuck : Duck
     {
-        public void display()
+        public override void display()
         {
             Console.WriteLine("RedheadDuck displays!");
         }

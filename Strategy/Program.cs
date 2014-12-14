@@ -14,7 +14,10 @@ namespace Strategy
 
             Duck mallard = new MallardDuck();
             Duck redhead = new RedheadDuck();
-            
+
+            mallard.quack();
+            redhead.quack();
+
             mallard.display();
             redhead.display();
 
