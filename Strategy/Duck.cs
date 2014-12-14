@@ -8,48 +8,71 @@ namespace Strategy
 {
     abstract class Duck
     {
+        public string name { get; set; }
+
         public virtual void quack() {
             Console.WriteLine("Quack!");
         }
 
         public void swim()
         {
-            Console.WriteLine("Duck swims!");
+            Console.WriteLine(name + " swims!");
         }
 
         public abstract void display();
 
         public void fly()
         {
-            Console.WriteLine("Duck flies!");
+            Console.WriteLine(name + " flies!");
         }
     }
 
     class MallardDuck : Duck
     {
+        public MallardDuck() {}
+
+        public MallardDuck(string name)
+        {
+            this.name = name;
+        }
+
         public override void display()
         {
-            Console.WriteLine("MallardDuck displays!");
+            Console.WriteLine(name + " looks like a mallard!");
         }
     }
 
     class RedheadDuck : Duck
     {
+        public RedheadDuck() {}
+
+        public RedheadDuck(string name)
+        {
+            this.name = name;
+        }
+
         public override void display()
         {
-            Console.WriteLine("RedheadDuck displays!");
+            Console.WriteLine(name + " looks like a redhead!");
         }
     }
 
     class RubberDuck : Duck
     {
+        public RubberDuck() {}
+
+        public RubberDuck(string name)
+        {
+            this.name = name;
+        }
+        
         public override void quack() {
-            Console.WriteLine("RubberDuck squeaks!");
+            Console.WriteLine(name + " squeaks!");
         }
         
         public override void display()
         {
-            Console.WriteLine("RubberDuck displays!");
+            Console.WriteLine(name + " looks like a rubber duck!");
         }
     }
 }

@@ -12,17 +12,14 @@ namespace Strategy
         {
             Console.WriteLine("~~~~~~~~~~~~ Begin Strategy Pattern ~~~~~~~~~~~~\r\n");
 
-            Duck mallard = new MallardDuck();
-            Duck redhead = new RedheadDuck();
-            Duck rubber = new RubberDuck();
+            Duck mallard = new MallardDuck("Mallard");
+            Duck redhead = new RedheadDuck("Redhead");
+            Duck rubber = new RubberDuck("Rubber Ducky");
 
-            Console.WriteLine("\t+++ Begin mallard duck simulation +++");
             RunSimulation(mallard);
 
-            Console.WriteLine("\t+++ Begin redhead duck simulation +++");
             RunSimulation(redhead);
 
-            Console.WriteLine("\t+++ Begin rubber duck simulation +++");
             RunSimulation(rubber); //rubber ducks should *not* fly
 
             Console.ReadKey();
@@ -30,6 +27,7 @@ namespace Strategy
 
         static public void RunSimulation(Duck duck)
         {
+            Console.WriteLine("\t+++ Begin simulation of " + duck.GetType() + " +++");
             duck.quack();
             duck.display();
             duck.fly();
