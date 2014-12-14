@@ -2,7 +2,7 @@
 
 namespace SimUDuck.Behaviors
 {
-    class MuteQuack : QuackBehavior
+    class MuteQuack : IQuackBehavior
     {
         public void quack()
         {

@@ -1,6 +1,6 @@
-﻿namespace SimUDuck
+﻿namespace SimUDuck.Behaviors
 {
-    interface QuackBehavior
+    interface IQuackBehavior
     {
         void quack();
     }

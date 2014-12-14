@@ -1,19 +1,17 @@
-﻿using System;
+﻿using SimUDuck.Behaviors;
+using System;
 
-namespace SimUDuck
+namespace SimUDuck.Ducks
 {
     class RubberDuck : Duck
     {
-        public RubberDuck() { }
+        private RubberDuck() { }
 
         public RubberDuck(string name)
         {
             this.name = name;
-        }
-
-        public override void quack()
-        {
-            Console.WriteLine(name + " squeaks!");
+            this.quackBehavior = new Squeak();
+            this.flyBehavior = new FlyNoWay();
         }
 
         public override void display()

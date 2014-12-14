@@ -1,6 +1,6 @@
-﻿namespace SimUDuck
+﻿namespace SimUDuck.Behaviors
 {
-    interface FlyBehavior
+    interface IFlyBehavior
     {
         void fly();
     }

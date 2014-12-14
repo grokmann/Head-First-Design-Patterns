@@ -2,7 +2,7 @@
 
 namespace SimUDuck.Behaviors
 {
-    class Squeak : QuackBehavior
+    class Squeak : IQuackBehavior
     {
         public void quack()
         {

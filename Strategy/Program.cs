@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimUDuck.Ducks;
+using System;
 
 namespace SimUDuck
 {
@@ -24,9 +25,9 @@ namespace SimUDuck
         static public void RunSimulation(Duck duck)
         {
             Console.WriteLine("\t+++ Begin simulation of " + duck.GetType() + " +++");
-            duck.quack();
+            duck.performQuack();
             duck.display();
-            duck.fly();
+            duck.performFly();
             Console.WriteLine();
         }
     }

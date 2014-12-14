@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace SimUDuck
+namespace SimUDuck.Behaviors
 {
-    class FlyWithWings : FlyBehavior
+    class FlyWithWings : IFlyBehavior
     {
         public void fly()
         {

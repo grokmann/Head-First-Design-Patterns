@@ -1,14 +1,18 @@
-﻿using System;
+﻿using SimUDuck.Behaviors;
+using System;
 
-namespace SimUDuck
+namespace SimUDuck.Ducks
 {
     class MallardDuck : Duck
     {
-        public MallardDuck() { }
+        private MallardDuck() {
+        }
 
         public MallardDuck(string name)
         {
             this.name = name;
+            this.quackBehavior = new Quack();
+            this.flyBehavior = new FlyWithWings();
         }
 
         public override void display()

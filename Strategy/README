@@ -12,3 +12,6 @@ Refactoring Steps
 * p. 4: FAIL: RubberDucks should not fly, so inheritance is not the answer.
 * p. 6: Joe proposes a flying interface, but this means the flying behavior is not reusable, and needs to be maintained separately across every Duck subclass.
 * p. 10: Need to pull the fly() and quack() methods (the behaviors that vary with each subclass) _out_ of the Duck class and into their own classes.
+* p. 15: Add two instance variables for behaviors
+* p. 15: Implement performQuack()
+* p. 16-17: set flyBehavior and quackBehavior instance variables (in constructor--not ideal because we are still programming to concrete implementationm, but this can be changed to dynamically assign different behavior at runtime)
