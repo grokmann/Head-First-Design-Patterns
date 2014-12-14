@@ -8,7 +8,7 @@ namespace Strategy
 {
     abstract class Duck
     {
-        public void quack() {
+        public virtual void quack() {
             Console.WriteLine("Quack!");
         }
 
@@ -38,6 +38,18 @@ namespace Strategy
         public override void display()
         {
             Console.WriteLine("RedheadDuck displays!");
+        }
+    }
+
+    class RubberDuck : Duck
+    {
+        public override void quack() {
+            Console.WriteLine("RubberDuck squeaks!");
+        }
+        
+        public override void display()
+        {
+            Console.WriteLine("RubberDuck displays!");
         }
     }
 }

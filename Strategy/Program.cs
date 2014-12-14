@@ -14,15 +14,19 @@ namespace Strategy
 
             Duck mallard = new MallardDuck();
             Duck redhead = new RedheadDuck();
+            Duck rubber = new RubberDuck();
 
             mallard.quack();
             redhead.quack();
+            rubber.quack();
 
             mallard.display();
             redhead.display();
+            rubber.display();
 
             mallard.fly();
             redhead.fly();
+            rubber.fly();
 
             Console.ReadKey();
         }
