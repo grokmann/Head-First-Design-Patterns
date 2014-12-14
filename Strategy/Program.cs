@@ -26,7 +26,7 @@ namespace Strategy
 
             mallard.fly();
             redhead.fly();
-            rubber.fly();
+            rubber.fly(); //rubber ducks should *not* fly
 
             Console.ReadKey();
         }
