@@ -1,0 +1,6 @@
+﻿Strategy Pattern (SimUDuck)
+================
+* p. 3: Joe adds the flying duck behavior using inheritance (genius!).
+* p. 4: FAIL: RubberDucks should not fly, so inheritance is not the answer.
+* p. 6: Joe proposes a flying interface, but this means the flying behavior is not reusable, and needs to be maintained separately across every Duck subclass.
+* p. 10: Need to pull the fly() and quack() methods (the behaviors that vary with each subclass) _out_ of the Duck class and into their own classes.
