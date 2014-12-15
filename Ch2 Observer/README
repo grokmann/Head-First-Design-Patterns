@@ -1,0 +1,20 @@
+﻿Weather-O-Rama Observer Pattern
+===============================
+
+
+
+*The Observer Pattern*
+
+Relevant OO Principles
+-------------------
+1. Encapsulate what varies.
+2. Favor composition over inheritance.
+3. Program to interfaces, not implementations.
+
+Refactoring Steps
+-----
+* p. 39: "Our job, if we choose to accept it, is to create an app that uses the WeatherData object to update three displays for current conditions, weather stats, and a forecast."
+
+Lessons
+-------
+* HAS-A (_composition_) can be better than IS-A (_inheritance_).

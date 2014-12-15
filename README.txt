@@ -1,7 +1,7 @@
-Head First Design Patterns Scratch Pad
+Head First Design Patterns in C# Scratch Pad
 ======================================
 
-Working through the book pattern by pattern to squeeze everything out of the book and get used to Git.
+Working through the book pattern by pattern in C# to squeeze everything out of the book and get used to Git.
 
 OO Design Pattern Guidelines (p. 32)
 ---------------------
