@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{416399DC-33C4-4936-B439-F72917EF162F}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WeatherStation</RootNamespace>
     <AssemblyName>WeatherStation</AssemblyName>
@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurrentConditionsDisplay.cs" />
+    <Compile Include="ForecastDisplay.cs" />
+    <Compile Include="StatisticsDisplay.cs" />
     <Compile Include="WeatherData.cs" />
     <Compile Include="WeatherStation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
