@@ -12,7 +12,9 @@ Refactoring Steps
 * p. 39: "Our job, if we choose to accept it, is to create an app that uses the WeatherData object to update three displays for current conditions, weather stats, and a forecast."
 * p. 43: Coding to concrete implementations.
 * p. 51: Refactoring to use Observer Pattern.
-  * p. 57 Added ISubject, IObserver, and IDisplayElement interfaces.
+  * p. 57 Added ISubject, IObserver, and IDisplayElement interfaces
+  * p. 58 Refactored WeatherData : ISubject
+  * p. 59 Refactored display elements : IObserver
 
 Lessons
 -------
