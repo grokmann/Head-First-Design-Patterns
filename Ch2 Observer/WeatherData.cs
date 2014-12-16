@@ -16,6 +16,7 @@ namespace WeatherStation
         public WeatherData() {
             temperature = 67.1f;
             humidity = 23.5f;
+            pressure = 80f;
 
             currentConditionsDisplay = new CurrentConditionsDisplay();
             statisticsDisplay = new StatisticsDisplay();
