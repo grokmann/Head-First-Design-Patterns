@@ -2,16 +2,17 @@
 
 namespace WeatherStation
 {
-    class ForecastDisplay
+    class ForecastDisplay : IObserver
     {
-        internal void update(float temp, float humidity, float pressure)
+        public void update(float temp, float humidity, float pressure)
         {
             display();
         }
 
         public void display()
         {
-            Console.WriteLine("Forecast displayed...");
+            Console.WriteLine("___ Forecast ___");
+            Console.WriteLine("Forecast displayed...\n");
         }
     }
 }

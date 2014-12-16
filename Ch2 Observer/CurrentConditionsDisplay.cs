@@ -2,12 +2,12 @@
 
 namespace WeatherStation
 {
-    class CurrentConditionsDisplay
+    class CurrentConditionsDisplay : IObserver
     {
         private float temperature;
         private float humidity;
 
-        internal void update(float temperature, float humidity, float pressure)
+        public void update(float temperature, float humidity, float pressure)
         {
             this.temperature = temperature;
             this.humidity = humidity;
@@ -16,7 +16,8 @@ namespace WeatherStation
 
         public void display()
         {
-            Console.WriteLine("Current conditions: {0}°F and {1}% humidity.", temperature, humidity);
+            Console.WriteLine("___ Current Conditions ___");
+            Console.WriteLine("Current conditions: {0}°F and {1}% humidity.\n", temperature, humidity);
         }
     }
 }

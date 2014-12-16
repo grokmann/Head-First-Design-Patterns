@@ -2,16 +2,17 @@
 
 namespace WeatherStation
 {
-    class StatisticsDisplay
+    class StatisticsDisplay : IObserver
     {
-        internal void update(float temperature, float humidity, float pressure)
+        public void update(float temperature, float humidity, float pressure)
         {
             display();
         }
 
         public void display()
         {
-            Console.WriteLine("Statistics displayed...");
+            Console.WriteLine("___ Statistics ___");
+            Console.WriteLine("Statistics displayed...\n");
         }
     }
 }

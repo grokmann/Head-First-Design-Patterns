@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace WeatherStation
 {
-    class WeatherData
+    class WeatherData : ISubject
     {
+        private List<IObserver> observers;
         private float temperature;
         private float humidity;
         private float pressure;
@@ -14,13 +17,7 @@ namespace WeatherStation
         private ForecastDisplay forecastDisplay;
 
         public WeatherData() {
-            temperature = 67.1f;
-            humidity = 23.5f;
-            pressure = 80f;
-
-            currentConditionsDisplay = new CurrentConditionsDisplay();
-            statisticsDisplay = new StatisticsDisplay();
-            forecastDisplay = new ForecastDisplay();
+            observers = new List<IObserver>();
         }
 
         public float getTemperature()
@@ -38,16 +35,32 @@ namespace WeatherStation
             return pressure;
         }
 
+        public void registerObserver(IObserver o)
+        {
+            observers.Add(o);
+        }
+
+        public void removeObserver(IObserver o)
+        {
+            observers.Remove(o);
+        }
+
+        public void notifyObservers()
+        {
+            observers.ForEach(o => o.update(temperature, humidity, pressure));
+        }
+
         public void measurementsChanged()
         {
-            float temp = getTemperature();
-            float humidity = getHumidity();
-            float pressure = getPressure();
+            notifyObservers();
+        }
 
-            // Coding to concrete implementation(!)
-            currentConditionsDisplay.update(temp, humidity, pressure);
-            statisticsDisplay.update(temp, humidity, pressure);
-            forecastDisplay.update(temp, humidity, pressure);
+        public void setMeasurements(float temperature, float humidity, float pressure)
+        {
+            this.temperature = temperature;
+            this.humidity = humidity;
+            this.pressure = pressure;
+            measurementsChanged();
         }
     }
 }
