@@ -11,11 +11,6 @@ namespace WeatherStation
         private float humidity;
         private float pressure;
 
-        // This is all kinds of terrible.
-        private CurrentConditionsDisplay currentConditionsDisplay;
-        private StatisticsDisplay statisticsDisplay;
-        private ForecastDisplay forecastDisplay;
-
         public WeatherData() {
             observers = new List<IObserver>();
         }
@@ -52,6 +47,7 @@ namespace WeatherStation
 
         public void measurementsChanged()
         {
+            Console.WriteLine("\n*** Measurements Changed ***");
             notifyObservers();
         }
 

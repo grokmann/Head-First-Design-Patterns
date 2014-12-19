@@ -2,7 +2,7 @@
 
 namespace WeatherStation
 {
-    class Program
+    class WeatherStation
     {
         static void Main(string[] args)
         {
