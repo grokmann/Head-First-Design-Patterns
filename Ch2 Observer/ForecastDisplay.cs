@@ -16,7 +16,7 @@ namespace WeatherStation
             weatherData.registerObserver(this);
         }        
         
-        public void update(float temperature, float humidity, float pressure)
+        public void update(float temp, float humidity, float pressure)
         {
             lastPressure = currentPressure;
             currentPressure = pressure;
