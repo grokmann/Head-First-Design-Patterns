@@ -17,22 +17,22 @@ namespace WeatherStation
             this.weatherData = weatherData;
             weatherData.registerObserver(this);
         }
-        public void update(float temp, float humidity, float pressure)
+        public void update(float temperature, float humidity, float pressure)
         {
-            Console.WriteLine("Heat index is " + computeHeatIndex(temp, humidity));
+            Console.WriteLine("Heat index is " + computeHeatIndex(temperature, humidity));
         }
 
-        private float computeHeatIndex(float t, float rh)
+        private float computeHeatIndex(float temperature, float relativeHumidity)
         {
-            float index = (float)((16.923 + (0.185212 * t) + (5.37941 * rh) - (0.100254 * t * rh) +
-                (0.00941695 * (t * t)) + (0.00728898 * (rh * rh)) +
-                (0.000345372 * (t * t * rh)) - (0.000814971 * (t * rh * rh)) +
-                (0.0000102102 * (t * t * rh * rh)) - (0.000038646 * (t * t * t)) + (0.0000291583 *
-                (rh * rh * rh)) + (0.00000142721 * (t * t * t * rh)) +
-                (0.000000197483 * (t * rh * rh * rh)) - (0.0000000218429 * (t * t * t * rh * rh)) +
-                0.000000000843296 * (t * t * rh * rh * rh)) -
-                (0.0000000000481975 * (t * t * t * rh * rh * rh)));
-            return index;
+            float heatIndex = (float)((16.923 + (0.185212 * temperature) + (5.37941 * relativeHumidity) - (0.100254 * temperature * relativeHumidity) +
+                (0.00941695 * (temperature * temperature)) + (0.00728898 * (relativeHumidity * relativeHumidity)) +
+                (0.000345372 * (temperature * temperature * relativeHumidity)) - (0.000814971 * (temperature * relativeHumidity * relativeHumidity)) +
+                (0.0000102102 * (temperature * temperature * relativeHumidity * relativeHumidity)) - (0.000038646 * (temperature * temperature * temperature)) + (0.0000291583 *
+                (relativeHumidity * relativeHumidity * relativeHumidity)) + (0.00000142721 * (temperature * temperature * temperature * relativeHumidity)) +
+                (0.000000197483 * (temperature * relativeHumidity * relativeHumidity * relativeHumidity)) - (0.0000000218429 * (temperature * temperature * temperature * relativeHumidity * relativeHumidity)) +
+                0.000000000843296 * (temperature * temperature * relativeHumidity * relativeHumidity * relativeHumidity)) -
+                (0.0000000000481975 * (temperature * temperature * temperature * relativeHumidity * relativeHumidity * relativeHumidity)));
+            return heatIndex;
         }
     }
 }

@@ -18,19 +18,19 @@ namespace WeatherStation
             weatherData.registerObserver(this);
         }
         
-        public void update(float temp, float humidity, float pressure)
+        public void update(float temperature, float humidity, float pressure)
         {
-            tempSum += temp;
+            tempSum += temperature;
             numReadings++;
 
-            if (temp > maxTemp)
+            if (temperature > maxTemp)
             {
-                maxTemp = temp;
+                maxTemp = temperature;
             }
 
-            if (temp < minTemp)
+            if (temperature < minTemp)
             {
-                minTemp = temp;
+                minTemp = temperature;
             }
             display();
         }
