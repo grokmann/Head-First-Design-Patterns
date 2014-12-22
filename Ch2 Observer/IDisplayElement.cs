@@ -4,6 +4,6 @@ namespace WeatherStation
 {
     interface IDisplayElement
     {
-        void display();
+        void update(float temp, float humidity, float pressure);
     }
 }

@@ -12,6 +12,7 @@ namespace WeatherStation
             CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(wd);
             StatisticsDisplay statisticsDisplay = new StatisticsDisplay(wd);
             ForecastDisplay forecastDisplay = new ForecastDisplay(wd);
+            HeatIndexDisplay heatIndexDisplay = new HeatIndexDisplay(wd);
 
             wd.setMeasurements(67.1f, 23.5f, 80f);
             wd.setMeasurements(82, 70, 29.2f);
