@@ -1,0 +1,25 @@
+﻿Weather-O-Rama Observer Pattern
+===============================
+
+*The Observer Pattern* defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.
+
+New OO Principles
+-------------------
+1. Strive for loosely coupled designs between objects that interact.
+
+Refactoring Steps
+-----
+* p. 39: "Our job, if we choose to accept it, is to create an app that uses the WeatherData object to update three displays for current conditions, weather stats, and a forecast."
+* p. 43: Coding to concrete implementations.
+* p. 51: Refactoring to use Observer Pattern.
+  * p. 57 Added IObservable<WeatherData>, IObserver, and IDisplayElement interfaces
+  * p. 58 Refactored WeatherData : IObservable<WeatherData>
+  * p. 59 Refactored display elements : IObserver
+* p. 61 Added HeatIndexDisplay
+* Already seeing the limitations of a Subject pushing all of the data out -- not used by every Observer. C# does not have the Observable class to get option of pulling data as needed, but does have delegates and evenst (not going to bother with that right now). Let's just refactor to use System.IObservable<> and System.IObserver<>.
+
+Lessons
+-------
+* Loose Coupling
+  * Loosely coupled objects can interact but have very little knowledge of each other.
+  * Loosely coupled designs allow us to build flexible OO systems that can handle change because they minimize the interdependency between objects.

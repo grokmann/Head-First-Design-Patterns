@@ -4,28 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D069544-0D7A-40EF-A9E8-88131EE3F6E7}</ProjectGuid>
+    <ProjectGuid>{7D0E97E4-F743-469B-8779-361C29490465}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimUDuck</RootNamespace>
-    <AssemblyName>SimUDuck</AssemblyName>
+    <RootNamespace>WeatherStation</RootNamespace>
+    <AssemblyName>WeatherStation</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,44 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Behaviors\FlyRocketPowered.cs" />
-    <Compile Include="Behaviors\MuteQuack.cs" />
-    <Compile Include="Behaviors\Quack.cs" />
-    <Compile Include="Behaviors\QuackBehavior.cs" />
-    <Compile Include="Ducks\Duck.cs" />
-    <Compile Include="Behaviors\FlyBehavior.cs" />
-    <Compile Include="Behaviors\FlyNoWay.cs" />
-    <Compile Include="Behaviors\FlyWithWings.cs" />
-    <Compile Include="Ducks\MallardDuck.cs" />
-    <Compile Include="Ducks\ModelDuck.cs" />
-    <Compile Include="MiniDuckSimulator.cs" />
+    <Compile Include="CurrentConditionsDisplay.cs" />
+    <Compile Include="ForecastDisplay.cs" />
+    <Compile Include="HeatIndexDisplay.cs" />
+    <Compile Include="IDisplayElement.cs" />
+    <Compile Include="IObserver.cs" />
+    <Compile Include="StatisticsDisplay.cs" />
+    <Compile Include="Unsubscriber.cs" />
+    <Compile Include="WeatherDataBroadcaster.cs" />
+    <Compile Include="WeatherData.cs" />
+    <Compile Include="WeatherStation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ducks\RedheadDuck.cs" />
-    <Compile Include="Ducks\RubberDuck.cs" />
-    <Compile Include="Behaviors\Squeak.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="README" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
