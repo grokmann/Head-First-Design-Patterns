@@ -2,27 +2,20 @@
 
 namespace WeatherStation
 {
-    class ForecastDisplay : IObserver<IDisplayElement>, IDisplayElement
+    class ForecastDisplay : IObserver<WeatherData>, IDisplayElement
     {
         private float currentPressure = 29.92f;
         private float lastPressure;
-        private ISubject weatherData;
+        private IObservable<WeatherData> weatherData;
 
         private ForecastDisplay() { }
 
-        public ForecastDisplay(ISubject weatherData)
+        public ForecastDisplay(IObservable<WeatherData> weatherDataBroadcaster)
         {
-            this.weatherData = weatherData;
-            weatherData.registerObserver(this);
+            this.weatherData = weatherDataBroadcaster;
+            weatherDataBroadcaster.Subscribe(this);
         }        
         
-        public void update(float temperature, float humidity, float pressure)
-        {
-            lastPressure = currentPressure;
-            currentPressure = pressure;
-            display();
-        }
-
         public void display()
         {
             Console.Write("Forecast: ");
@@ -33,6 +26,23 @@ namespace WeatherStation
 		    } else if (currentPressure < lastPressure) {
 			    Console.WriteLine("Watch out for cooler, rainy weather.");
 		    }
+        }
+
+        public void OnNext(WeatherData value)
+        {
+            lastPressure = currentPressure;
+            currentPressure = value.Pressure;
+            display();
+        }
+
+        public void OnError(Exception error)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnCompleted()
+        {
+            throw new NotImplementedException();
         }
     }
 }

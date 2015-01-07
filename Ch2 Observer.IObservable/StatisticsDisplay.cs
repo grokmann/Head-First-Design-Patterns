@@ -2,24 +2,26 @@
 
 namespace WeatherStation
 {
-    class StatisticsDisplay : IObserver, IDisplayElement
+    class StatisticsDisplay : IObserver<WeatherData>, IDisplayElement
     {
         private float maxTemp = 0.0f;
         private float minTemp = 200;
         private float tempSum = 0.0f;
         private int numReadings;
-        private ISubject weatherData;
+        private IObservable<WeatherData> weatherData;
 
         private StatisticsDisplay() { }
 
-        public StatisticsDisplay(ISubject weatherData)
+        public StatisticsDisplay(IObservable<WeatherData> weatherData)
         {
             this.weatherData = weatherData;
-            weatherData.registerObserver(this);
+            weatherData.Subscribe(this);
         }
-        
-        public void update(float temperature, float humidity, float pressure)
+
+        public void OnNext(WeatherData value)
         {
+            float temperature = value.Temperature;
+
             tempSum += temperature;
             numReadings++;
 
@@ -41,6 +43,16 @@ namespace WeatherStation
             Console.WriteLine("\tAvg. temperature = " + (tempSum / numReadings));
             Console.WriteLine("\tMax. temperature: " + maxTemp);
             Console.WriteLine("\tMin. temperature: " + minTemp);
+        }
+
+        public void OnError(Exception error)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnCompleted()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -2,18 +2,18 @@
 
 namespace WeatherStation
 {
-    class CurrentConditionsDisplay : IObserver<IDisplayElement>, IDisplayElement
+    class CurrentConditionsDisplay : IObserver<WeatherData>, IDisplayElement
     {
         private float temperature;
         private float humidity;
-        private ISubject weatherData;
+        private IObservable<WeatherData> weatherDataBroadcaster;
 
         private CurrentConditionsDisplay() { }
 
-        public CurrentConditionsDisplay(IObservable<IDisplayElement> weatherData)
+        public CurrentConditionsDisplay(IObservable<WeatherData> weatherDataBroadcaster)
         {
-            this.weatherData = weatherData;
-            weatherData.registerObserver(this);
+            this.weatherDataBroadcaster = weatherDataBroadcaster;
+            weatherDataBroadcaster.Subscribe(this);
         }
 
         public void update(float temperature, float humidity, float pressure)
@@ -26,6 +26,23 @@ namespace WeatherStation
         public void display()
         {
             Console.WriteLine("Current Conditions: {0}°F and {1}% humidity.", temperature, humidity);
+        }
+
+        public void OnNext(WeatherData value)
+        {
+            this.temperature = value.Temperature;
+            this.humidity = value.Humidity;
+            display();       
+        }
+
+        public void OnError(Exception error)
+        {
+            Console.WriteLine("An error occured: {0}", error.Message);
+        }
+
+        public void OnCompleted()
+        {
+            Console.WriteLine("Completed!");
         }
     }
 }

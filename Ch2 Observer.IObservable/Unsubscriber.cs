@@ -8,10 +8,10 @@ namespace WeatherStation
 {
     public class Unsubscriber : IDisposable
     {
-        private readonly List<IObserver<IDisplayElement>> observers;
-        private readonly IObserver<IDisplayElement> observer;
+        private readonly List<IObserver<WeatherData>> observers;
+        private readonly IObserver<WeatherData> observer;
 
-        public Unsubscriber(List<IObserver<IDisplayElement>> observers, IObserver<IDisplayElement> observer)
+        public Unsubscriber(List<IObserver<WeatherData>> observers, IObserver<WeatherData> observer)
         {
             this.observers = observers;
             this.observer = observer;
@@ -19,9 +19,9 @@ namespace WeatherStation
 
         public void Dispose()
         {
-            if (_observer != null && _observers.Contains(_observer))
+            if (observer != null && observers.Contains(observer))
             {
-                _observers.Remove(_observer);
+                observers.Remove(observer);
             }
         }
     }

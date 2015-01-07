@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace WeatherStation
 {
-    class HeatIndexDisplay : IObserver, IDisplayElement
+    class HeatIndexDisplay : IObserver<WeatherData>, IDisplayElement
     {
-        ISubject weatherData;
+        IObservable<WeatherData> weatherData;
+        private float temperature;
+        private float humidity;
 
         private HeatIndexDisplay() { }
 
-        public HeatIndexDisplay(ISubject weatherData)
+        public HeatIndexDisplay(IObservable<WeatherData> weatherData)
         {
             this.weatherData = weatherData;
-            weatherData.registerObserver(this);
-        }
-        public void update(float temperature, float humidity, float pressure)
-        {
-            Console.WriteLine("Heat index is " + computeHeatIndex(temperature, humidity));
+            weatherData.Subscribe(this);
         }
 
         private float computeHeatIndex(float temperature, float relativeHumidity)
@@ -33,6 +31,28 @@ namespace WeatherStation
                 0.000000000843296 * (temperature * temperature * relativeHumidity * relativeHumidity * relativeHumidity)) -
                 (0.0000000000481975 * (temperature * temperature * temperature * relativeHumidity * relativeHumidity * relativeHumidity)));
             return heatIndex;
+        }
+
+        public void OnNext(WeatherData value)
+        {
+            temperature = value.Temperature;
+            humidity = value.Humidity;
+            display();
+        }
+
+        public void OnError(Exception error)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnCompleted()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void display()
+        {
+            Console.WriteLine("Heat index is " + computeHeatIndex(temperature, humidity));
         }
     }
 }

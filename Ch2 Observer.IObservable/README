@@ -12,8 +12,8 @@ Refactoring Steps
 * p. 39: "Our job, if we choose to accept it, is to create an app that uses the WeatherData object to update three displays for current conditions, weather stats, and a forecast."
 * p. 43: Coding to concrete implementations.
 * p. 51: Refactoring to use Observer Pattern.
-  * p. 57 Added ISubject, IObserver, and IDisplayElement interfaces
-  * p. 58 Refactored WeatherData : ISubject
+  * p. 57 Added IObservable<WeatherData>, IObserver, and IDisplayElement interfaces
+  * p. 58 Refactored WeatherData : IObservable<WeatherData>
   * p. 59 Refactored display elements : IObserver
 * p. 61 Added HeatIndexDisplay
 * Already seeing the limitations of a Subject pushing all of the data out -- not used by every Observer. C# does not have the Observable class to get option of pulling data as needed, but does have delegates and evenst (not going to bother with that right now). Let's just refactor to use System.IObservable<> and System.IObserver<>.

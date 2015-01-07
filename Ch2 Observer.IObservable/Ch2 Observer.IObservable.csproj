@@ -49,9 +49,9 @@
     <Compile Include="HeatIndexDisplay.cs" />
     <Compile Include="IDisplayElement.cs" />
     <Compile Include="IObserver.cs" />
-    <Compile Include="ISubject.cs" />
     <Compile Include="StatisticsDisplay.cs" />
     <Compile Include="Unsubscriber.cs" />
+    <Compile Include="WeatherDataBroadcaster.cs" />
     <Compile Include="WeatherData.cs" />
     <Compile Include="WeatherStation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
