@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7d634147-4989-4220-a190-a5ca08115d16" name="Pre-Decorator" linkedPackageId="00a8a2c1-d43d-4b49-b893-cd6f57835bad" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="311f7d3f-bf1f-428b-b22e-2a19524c8043">
+      <profileInstance Id="6ba7ff46-e18b-4b79-9afa-be5422f149c3" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c470ad3d-6307-4105-88e4-81b07e85f7f4">
+      <profileInstance Id="1289b70b-fbf0-4785-b1a8-35668733789f" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="98a38a79-6eba-43e4-92aa-629d8a08fdb4" name="Beverage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0a628307-b27b-4bf8-a56c-2fe454461aa8" />
+        <ownedAttributesInternal>
+          <property Id="e0ea758e-ebda-4f94-bdb2-6760613b37a2" name="description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f6797f2a-4794-4b46-a273-7a0d82340279" />
+          </property>
+          <property Id="d0254409-97c2-48c1-9bc6-812f8aec94a0" name="milk" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="051b6ba2-c75a-4ffe-bc10-be64b7336280" />
+          </property>
+          <property Id="4811b1b3-9f08-4f1f-bd47-0e6e641c8687" name="soy" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7360ebee-c016-4402-bee1-8f5796d7a3f4" />
+          </property>
+          <property Id="a109a04f-c007-4845-8a15-eec19f33bcc1" name="mocha" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fe07082b-8787-49c1-865a-b2eb40bf87d7" />
+          </property>
+          <property Id="3679803f-fe1a-4fc1-bd6f-89d4db48de6f" name="whip" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="35710c30-7531-4496-9d7d-42a5ac5fd5ae" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="5f6f7887-75f6-4c31-a04c-0714c06dfc83" name="getDescription" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="da9e1111-22c7-4e0c-9bc4-dd9625bb83ca" />
+          </operation>
+          <operation Id="87896cd5-dd2d-4dd6-b619-4dbf440f42e2" name="cost" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2d55f383-96ec-4ca6-a770-540d41de86ed" />
+          </operation>
+          <operation Id="857fb87b-983f-4636-a1df-96832c421612" name="hasSoy" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2b81f54b-3314-489c-ab34-700d994464d7" />
+          </operation>
+          <operation Id="4eca5846-40e7-4364-bca3-15d04458bd8b" name="hasMocha" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="da79a1aa-abbd-4e8c-8362-94ac5b0d7c36" />
+          </operation>
+          <operation Id="4eddfe9c-ea37-4c6a-9c04-c87e39e780ac" name="setMocha" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e50df6c8-c457-4f98-8d9d-55de48133dae" />
+          </operation>
+          <operation Id="19c6ee45-7200-43ea-8cd3-d4b9fb613a41" name="hasWhip" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="806bc61a-1e77-4287-8084-974354aaa58c" />
+          </operation>
+          <operation Id="aeaa97f6-9487-42a9-8743-e7bf221d47c5" name="setWhip" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="91d67b09-ec14-45f6-a91a-e522ba582ab6" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="454be8af-99ec-4525-be05-50dff7f180ab" name="HouseBlend" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dc51ec8e-3988-4da5-9815-60ffd61f33dc" />
+        <generalsInternal>
+          <generalization Id="757b27b9-89e1-4933-8ad2-a248844d1d5c" isSubstitutable="false">
+            <classMoniker Id="98a38a79-6eba-43e4-92aa-629d8a08fdb4" LastKnownName="Beverage" />
+            <elementDefinition Id="16da64bb-ece9-48f4-8950-e905bcf57f21" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="d688f1e7-2795-4ed9-85cd-d4b853fab38e" name="cost" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="72598358-41b5-4595-afed-967fb82771a4" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2db3ef0a-80b8-4aec-8e67-fab0be6e1b87" name="DarkRoast" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9fc1932e-2adf-4718-bde2-1de0e600ce62" />
+        <generalsInternal>
+          <generalization Id="90081f56-8cbb-49e0-b1a1-3c588e99106a" isSubstitutable="false">
+            <classMoniker Id="98a38a79-6eba-43e4-92aa-629d8a08fdb4" LastKnownName="Beverage" />
+            <elementDefinition Id="59aa9080-cb17-4d5a-aae4-adf7bcaeb7bf" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="06d8f857-9e4d-4744-9324-75930cf05feb" name="cost" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b799c808-2b99-433f-9bff-302205b5e310" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="856fa519-f4ee-4327-b065-bbb086c3766f" name="Decaf" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1ea39772-1b4e-412d-b2c9-f3032d26d350" />
+        <generalsInternal>
+          <generalization Id="d6126d6b-2f0a-427c-8158-1e722ad4e462" isSubstitutable="false">
+            <classMoniker Id="98a38a79-6eba-43e4-92aa-629d8a08fdb4" LastKnownName="Beverage" />
+            <elementDefinition Id="245e8028-0d8e-4f87-a3d0-23b33df2c74b" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="ca81902c-4b22-403a-9fe7-38217573adef" name="cost" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d536b5dd-6b7b-4e9d-8039-c818939d7b0a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0b6acc4b-bba9-4b56-ac30-3b9e50103d57" name="Espresso" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f0432b71-f71b-4705-bca9-2f4124e3c9bc" />
+        <generalsInternal>
+          <generalization Id="c8de6776-d07c-4bde-a256-18e44dd8ff0a" isSubstitutable="false">
+            <classMoniker Id="98a38a79-6eba-43e4-92aa-629d8a08fdb4" LastKnownName="Beverage" />
+            <elementDefinition Id="93aea1c6-cd2a-4b89-a257-f9d2ceb72414" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="9f0ed328-d1d9-4231-9343-1be28c1de4a5" name="cost" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4e20241f-db1c-46a3-a7ff-166e8a8ba92d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="00a8a2c1-d43d-4b49-b893-cd6f57835bad" name="DesignPatterns">
+    <elementDefinition Id="d104d7fa-24e9-469e-95f3-46080e8aa52c" />
+  </package>
+</logicalClassDesignerModel>

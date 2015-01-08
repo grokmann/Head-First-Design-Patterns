@@ -10,6 +10,7 @@ namespace Ch3_Decorator
     {
         static void Main(string[] args)
         {
+            var cost = true ? false : false;
         }
     }
 }
