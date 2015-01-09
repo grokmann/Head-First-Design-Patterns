@@ -16,9 +16,34 @@ namespace StarbuzzCoffee.Condiments
             return beverage.getDescription() + ", Mocha";
         }
 
+        public override Size getSize()
+        {
+            return this.beverage.getSize();
+        }
+
+        public override void setSize(Size size)
+        {
+            this.beverage.setSize(size);
+        }
+
         public override decimal cost()
         {
-            return beverage.cost() + .20m;
+            var cost = beverage.cost();
+
+            switch (beverage.getSize())
+            {
+                case Size.Tall:
+                    cost += .15m;
+                    break;
+                case Size.Grande:
+                    cost += .20m;
+                    break;
+                case Size.Venti:
+                    cost += .25m;
+                    break;
+            }
+
+            return cost;
         }
     }
 }
