@@ -25,11 +25,14 @@
     <Content Include="Decorator\Pre-Decorator-Anti-Pattern.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Decorator\Pre-Decorator-Anti-Pattern.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Decorator\Pre-Decorator-Anti-Pattern.classdiagram</DependentUpon>
-    </Content>
     <Folder Include="ModelDefinition\" />
+    <Content Include="Decorator\Starbuzz-Decorator-Pattern.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Decorator\Starbuzz-Decorator-Pattern.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Decorator\Starbuzz-Decorator-Pattern.classdiagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\DesignPatterns.uml">
       <SubType>Content</SubType>
     </Content>

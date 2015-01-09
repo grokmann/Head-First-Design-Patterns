@@ -8,7 +8,7 @@ namespace WeatherStation
     {
         private List<IObserver<WeatherData>> observers;
         private WeatherData weatherData;
-        private IDisposable unsubscriber;
+        //private IDisposable unsubscriber;
 
         public WeatherDataBroadcaster() {
             observers = new List<IObserver<WeatherData>>();

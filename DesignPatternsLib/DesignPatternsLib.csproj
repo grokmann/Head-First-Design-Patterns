@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0D8E05E9-9D86-4F67-8D0E-5597EBA60403}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{603C81C7-4AEB-4064-9F41-9937FB1483E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ch3_Decorator</RootNamespace>
-    <AssemblyName>Ch3 Decorator</AssemblyName>
+    <RootNamespace>DesignPatternsLib</RootNamespace>
+    <AssemblyName>DesignPatternsLib</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,23 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Beverages\Beverage.cs" />
-    <Compile Include="Beverages\Decaf.cs" />
-    <Compile Include="Beverages\DarkRoast.cs" />
-    <Compile Include="Beverages\Espresso.cs" />
-    <Compile Include="Beverages\HouseBlend.cs" />
-    <Compile Include="Condiments\CondimentDecorator.cs" />
-    <Compile Include="Condiments\Whip.cs" />
-    <Compile Include="Condiments\Soy.cs" />
-    <Compile Include="Condiments\Mocha.cs" />
-    <Compile Include="StarbuzzCoffee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="README" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
