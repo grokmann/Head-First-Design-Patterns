@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GreekPizza.cs" />
+    <Compile Include="PepperoniPizza.cs" />
+    <Compile Include="CheesePizza.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="PizzaFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
