@@ -1,0 +1,21 @@
+﻿Pizza Factory Pattern
+===============================
+
+*The Factory Pattern* 
+
+
+Indications
+-----
+* You need to program to concrete classes, yet you want to manage the change around those classes (keeping the classes closed to modification).
+
+New OO Principles
+-------------------
+1. 
+
+Refactoring Steps
+-----
+* p. 114: Pizza shop makes one type of pizza.
+
+Lessons
+-------
+* 
