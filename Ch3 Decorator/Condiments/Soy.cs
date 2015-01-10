@@ -4,8 +4,6 @@ namespace StarbuzzCoffee.Condiments
 {
     class Soy : CondimentDecorator
     {
-        Beverage beverage;
-
         public Soy(Beverage beverage)
         {
             this.beverage = beverage;
@@ -14,15 +12,6 @@ namespace StarbuzzCoffee.Condiments
         public override string getDescription()
         {
             return beverage.getDescription() + ", Soy";
-        }
-        public override Size getSize()
-        {
-            return this.beverage.getSize();
-        }
-
-        public override void setSize(Size size)
-        {
-            this.beverage.setSize(size);
         }
 
         public override decimal cost()
