@@ -4,6 +4,8 @@ namespace StarbuzzCoffee.Condiments
 {
     class Whip : CondimentDecorator
     {
+        Beverage beverage;
+
         public Whip(Beverage beverage)
         {
             this.beverage = beverage;
@@ -12,6 +14,15 @@ namespace StarbuzzCoffee.Condiments
         public override string getDescription()
         {
             return beverage.getDescription() + ", Whip";
+        }
+        public override Size getSize()
+        {
+            return this.beverage.getSize();
+        }
+
+        public override void setSize(Size size)
+        {
+            this.beverage.setSize(size);
         }
 
         public override decimal cost()
