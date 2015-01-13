@@ -15,7 +15,9 @@ New OO Principles
 Refactoring Steps
 -----
 * p. 114: Pizza shop makes one type of pizza.
-* p. 114: Need more than one type of pizza...
+* p. 114: Need more than one type of pizza... Code is _not_ closed for modification. Have to modify the existing code to add new types of pizza.
+* p. 116 Encapsulate what changes. In this case, it's the creation of the the pizza types. The operations that follow (prepare, bake, etc.) remain the same for all pizzas. This encapsulation is a factory. orderPizza() does not need to know how to assemble a pizza, so it will delegate this action to the SimplePizzaFactory.
+* p.117 Could define a simple factory as a static method, called a static factory, but could not then subclass and change behavior of the create method.
 
 Lessons
 -------

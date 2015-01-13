@@ -41,11 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GreekPizza.cs" />
-    <Compile Include="PepperoniPizza.cs" />
-    <Compile Include="CheesePizza.cs" />
-    <Compile Include="Pizza.cs" />
-    <Compile Include="PizzaFactory.cs" />
+    <Compile Include="Factories\SimplePizzaFactory.cs" />
+    <Compile Include="Pizzas\VeggiePizza.cs" />
+    <Compile Include="Pizzas\GreekPizza.cs" />
+    <Compile Include="Pizzas\ClamPizza.cs" />
+    <Compile Include="Pizzas\PepperoniPizza.cs" />
+    <Compile Include="Pizzas\CheesePizza.cs" />
+    <Compile Include="Pizzas\Pizza.cs" />
+    <Compile Include="Pizzeria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
