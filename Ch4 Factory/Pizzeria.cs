@@ -15,13 +15,13 @@ namespace Ch4_Factory
 
         static void Main(string[] args)
         {
-            Pizzeria pizzeria = new Pizzeria(new SimplePizzaFactory());
+            Pizzeria pizzeria = new Pizzeria(new NYPizzaFactory());
 
-            Pizza pizza1 = pizzeria.OrderPizza("cheese");
-            Pizza pizza2 = pizzeria.OrderPizza("greek");
-            Pizza pizza3 = pizzeria.OrderPizza("pepperoni");
-            Pizza pizza4 = pizzeria.OrderPizza("clam");
-            Pizza pizza5 = pizzeria.OrderPizza("veggie");
+            Pizza pizza = pizzeria.OrderPizza("veggie");
+
+            pizzeria = new Pizzeria(new ChicagoPizzaFactory());
+
+            pizza = pizzeria.OrderPizza("veggie");
 
             Console.ReadKey();
         }

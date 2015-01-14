@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factories\SimplePizzaFactory.cs" />
+    <Compile Include="Factories\NYPizzaFactory.cs" />
+    <Compile Include="Factories\SimplePizzaFactory - Copy.cs" />
+    <Compile Include="Factories\ChicagoPizzaFactory.cs" />
     <Compile Include="Pizzas\VeggiePizza.cs" />
     <Compile Include="Pizzas\GreekPizza.cs" />
     <Compile Include="Pizzas\ClamPizza.cs" />

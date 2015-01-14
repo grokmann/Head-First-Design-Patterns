@@ -1,12 +1,15 @@
 ﻿using Ch4_Factory.Pizzas;
+using System;
 
 namespace Ch4_Factory.Factories
 {
-    class SimplePizzaFactory
+    class NYPizzaFactory : SimplePizzaFactory
     {
-        public Pizza CreatePizza(string type)
+        public override Pizza CreatePizza(string type)
         {
             Pizza pizza = null;
+
+            Console.WriteLine("\nNew York-Style pizza coming up!");
 
             if (type.Equals("cheese"))
             {
