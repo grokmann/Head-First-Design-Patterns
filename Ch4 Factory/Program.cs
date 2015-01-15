@@ -10,12 +10,16 @@ namespace Ch4_Factory
         {
             Pizzeria nyPizzeria = new NYStylePizzeria();
             Pizzeria chicagoPizzeria = new ChicagoStylePizzeria();
+            Pizzeria californiaPizzeria = new CaliforniaStylePizzeria();
 
             Pizza pizza = nyPizzeria.OrderPizza("cheese");
             Console.WriteLine("Ethan ordered a " + pizza.GetName() + ".\n");
 
             pizza = chicagoPizzeria.OrderPizza("cheese");
             Console.WriteLine("Joel ordered a " + pizza.GetName() + ".\n");
+
+            pizza = californiaPizzeria.OrderPizza("cheese");
+            Console.WriteLine("Sunshine Otter ordered a " + pizza.GetName() + ".\n");
 
             Console.ReadKey();
         }

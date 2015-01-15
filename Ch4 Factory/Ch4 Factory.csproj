@@ -41,10 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pizzas\CaliforniaStyleCheesePizza.cs" />
     <Compile Include="Pizzas\ChicagoStyleCheesePizza.cs" />
     <Compile Include="Pizzas\NYStyleCheesePizza.cs" />
     <Compile Include="Pizzas\ChicagoStyleVeggiePizza.cs" />
+    <Compile Include="Pizzas\CaliforniaStyleVeggiePizza.cs" />
     <Compile Include="Pizzas\NYStyleVeggiePizza.cs" />
+    <Compile Include="Pizzerias\CaliforniaStylePizzeria.cs" />
     <Compile Include="Pizzerias\NYStylePizzeria.cs" />
     <Compile Include="Pizzerias\SimplePizzaFactory.cs" />
     <Compile Include="Pizzerias\ChicagoStylePizzeria.cs" />
