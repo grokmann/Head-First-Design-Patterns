@@ -9,8 +9,6 @@ namespace Ch4_Factory.Pizzerias
         {
             Pizza pizza = null;
 
-            Console.WriteLine("\nNew York-Style pizza coming up!");
-
             if (pizzaType.Equals("cheese"))
             {
                 pizza = new NYStyleCheesePizza();

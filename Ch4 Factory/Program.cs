@@ -9,14 +9,13 @@ namespace Ch4_Factory
         static void Main(string[] args)
         {
             Pizzeria nyPizzeria = new NYStylePizzeria();
-
-            Pizza pizza = nyPizzeria.OrderPizza("cheese");
-            pizza = nyPizzeria.OrderPizza("veggie");
-
             Pizzeria chicagoPizzeria = new ChicagoStylePizzeria();
 
+            Pizza pizza = nyPizzeria.OrderPizza("cheese");
+            Console.WriteLine("Ethan ordered a " + pizza.GetName() + ".\n");
+
             pizza = chicagoPizzeria.OrderPizza("cheese");
-            pizza = chicagoPizzeria.OrderPizza("veggie");
+            Console.WriteLine("Joel ordered a " + pizza.GetName() + ".\n");
 
             Console.ReadKey();
         }

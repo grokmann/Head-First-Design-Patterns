@@ -15,6 +15,8 @@ namespace Ch4_Factory.Pizzerias
             pizza.Cut();
             pizza.Box();
 
+            Console.WriteLine("");
+
             return pizza;
         }
 

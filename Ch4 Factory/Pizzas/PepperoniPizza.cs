@@ -3,7 +3,7 @@
     class PepperoniPizza : Pizza
    {
         public PepperoniPizza() {
-            type = "pepperoni";
+            name = "pepperoni";
         }
     }
 }

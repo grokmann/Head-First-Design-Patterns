@@ -1,8 +1,9 @@
 ﻿Pizza Factory Pattern
 ===============================
 
-*The Factory Pattern* 
-
+*The Factory Patterns* 
+*Factory Method Pattern*
+The Factory Method Pattern encapsulates object creation by letting subclasses decide what objects to create. Components include an abstract creator class and concrete creators. The abstract creator acts on the abstract product. The concrete creators create concrete products.
 
 Indications
 -----

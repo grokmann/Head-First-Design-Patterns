@@ -4,7 +4,11 @@
     {
         public NYStyleCheesePizza()
         {
-            type = "New York-style cheese";
+            name = "New York-style sauce and cheese pizza";
+            dough = "thin-crust dough";
+            sauce = "marinara sauce";
+
+            toppings.Add("grated Reggiano cheese");
         }
     }
 }

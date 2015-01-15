@@ -3,7 +3,7 @@
     class CheesePizza : Pizza
    {
         public CheesePizza() {
-            type = "cheese";
+            name = "cheese";
         }
     }
 }
