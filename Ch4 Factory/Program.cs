@@ -8,15 +8,15 @@ namespace Ch4_Factory
     {
         static void Main(string[] args)
         {
-            Pizzeria NYPizzeria = new NYStylePizzeria();
+            Pizzeria nyPizzeria = new NYStylePizzeria();
 
-            Pizza pizza = NYPizzeria.OrderPizza("cheese");
-            pizza = NYPizzeria.OrderPizza("veggie");
+            Pizza pizza = nyPizzeria.OrderPizza("cheese");
+            pizza = nyPizzeria.OrderPizza("veggie");
 
-            Pizzeria ChicagoPizzeria = new ChicagoStylePizzeria();
+            Pizzeria chicagoPizzeria = new ChicagoStylePizzeria();
 
-            pizza = ChicagoPizzeria.OrderPizza("cheese");
-            pizza = ChicagoPizzeria.OrderPizza("veggie");
+            pizza = chicagoPizzeria.OrderPizza("cheese");
+            pizza = chicagoPizzeria.OrderPizza("veggie");
 
             Console.ReadKey();
         }

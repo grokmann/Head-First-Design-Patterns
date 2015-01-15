@@ -21,6 +21,8 @@ Refactoring Steps
 * p. 119: HFDP Honorable Mention: This simple factory is _not_ the Factory Pattern, but a programming idiom.
 * p. 121: Franchising! Need two new styles of pizza: New York and Chicago. First the naive way... two new simple factories.
 * p. 122: Moving CreatePizza() to Pizzeria and making both abstract. Each regional pizzeria is going to subclass.
+* p. 125: "...OrderPizza() method in the superclass has no clue which Pizza we are creating;"
+* p. 127: "All the responsibility for instantiating Pizzas has been moved into a *method* that acts as a *factory*."
 
 Lessons
 -------
