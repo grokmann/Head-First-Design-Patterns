@@ -1,35 +1,35 @@
 ﻿using Ch4_Factory.Pizzas;
 using System;
 
-namespace Ch4_Factory.Factories
+namespace Ch4_Factory.Pizzerias
 {
-    class NYPizzaFactory : SimplePizzaFactory
+    class NYStylePizzeria : Pizzeria
     {
-        public override Pizza CreatePizza(string type)
+        public override Pizza CreatePizza(String pizzaType)
         {
             Pizza pizza = null;
 
             Console.WriteLine("\nNew York-Style pizza coming up!");
 
-            if (type.Equals("cheese"))
+            if (pizzaType.Equals("cheese"))
             {
-                pizza = new CheesePizza();
+                pizza = new NYStyleCheesePizza();
             }
-            else if (type.Equals("greek"))
+            else if (pizzaType.Equals("greek"))
             {
                 pizza = new GreekPizza();
             }
-            else if (type.Equals("pepperoni"))
+            else if (pizzaType.Equals("pepperoni"))
             {
                 pizza = new PepperoniPizza();
             }
-            else if (type.Equals("clam"))
+            else if (pizzaType.Equals("clam"))
             {
                 pizza = new ClamPizza();
             }
-            else if (type.Equals("veggie"))
+            else if (pizzaType.Equals("veggie"))
             {
-                pizza = new VeggiePizza();
+                pizza = new NYStyleVeggiePizza();
             }
 
             return pizza;

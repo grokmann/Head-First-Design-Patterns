@@ -1,15 +1,12 @@
 ﻿using Ch4_Factory.Pizzas;
-using System;
 
-namespace Ch4_Factory.Factories
+namespace Ch4_Factory.Pizzerias
 {
-    class ChicagoPizzaFactory : SimplePizzaFactory
+    class SimplePizzaFactory
     {
-        public override Pizza CreatePizza(string type)
+        public virtual Pizza CreatePizza(string type)
         {
             Pizza pizza = null;
-
-            Console.WriteLine("\nChicago-Style pizza coming up!");
 
             if (type.Equals("cheese"))
             {
@@ -29,7 +26,7 @@ namespace Ch4_Factory.Factories
             }
             else if (type.Equals("veggie"))
             {
-                pizza = new VeggiePizza();
+                pizza = new NYStyleVeggiePizza();
             }
 
             return pizza;

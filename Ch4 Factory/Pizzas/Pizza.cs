@@ -2,8 +2,8 @@
 
 namespace Ch4_Factory.Pizzas
 {
-    class Pizza
-   {
+    public class Pizza
+    {
         public string type;
 
         public Pizza() {
