@@ -21,20 +21,21 @@ namespace Ch5_Singleton
 
         public static ChocolateBoiler GetInstance()
         {
-            lock (uniqueInstance)
-            {
-                if (uniqueInstance == null)
+            if (uniqueInstance == null) {
+                lock (uniqueInstance)
                 {
-                    Console.WriteLine("Creating new, unique instance of ChocolateBoiler");
-                    uniqueInstance = new ChocolateBoiler();
+                    if (uniqueInstance == null) {
+                        Console.WriteLine("Creating new, unique instance of ChocolateBoiler");
+                        uniqueInstance = new ChocolateBoiler();
+                    }
                 }
-                else
-                {
-                    Console.WriteLine("Using the previously created instance of ChocolateBoiler");
-                }
-
-                return uniqueInstance;
             }
+            else
+            {
+                Console.WriteLine("Using the previously created instance of ChocolateBoiler");
+            }
+
+            return uniqueInstance;
         }
 
         public void Fill()

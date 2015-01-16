@@ -18,6 +18,10 @@ Refactoring Steps
 * p. 177: Bad implementation of ChocolateBoiler.
 * p. 178: Refactor ChocolateBoiler to use Singleton Pattern.
 * p. 181-2: Multi-threading _can_ result in two separate instances. Adding lock (uniqueInstance) to body of GetInstance() will force every thread to wait its turn. Also added _volatile_ keyword to uniqueInstance. Keyword volatile is used as a hint to the compiler that this data member is accessed by multiple threads.
+* p. 183 Performance hit: Locking is expensive, and is only relevant the first time we set the uniqueInstance variable to an instance. How to correct?
+  * Do nothing if performance of GetInstance()
+  * Move to an eagerly-created rather than lazily-created instance. uniqueInstance is set with static initializer, and it's automatically thread-safe.
+  * Use "double-checked locking"
 
 Lessons
 -------
