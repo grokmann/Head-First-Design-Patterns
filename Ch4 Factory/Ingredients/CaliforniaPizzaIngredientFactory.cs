@@ -31,7 +31,11 @@ namespace Ch4_Factory.Pizzerias
 
         public IVeggies[] CreateVeggies()
         {
-            IVeggies[] veggies = { new Avocado(), new Kale(), new BeanSprouts() };
+            IVeggies[] veggies = {
+                new Avocado(),
+                new Kale(),
+                new BeanSprouts()
+            };
             return veggies;
         }
     }

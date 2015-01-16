@@ -29,7 +29,11 @@
 
         public IVeggies[] CreateVeggies()
         {
-            IVeggies[] veggies = { new BlackOlives(), new Spinach(), new Eggplant() };
+            IVeggies[] veggies = {
+                new BlackOlives(),
+                new Spinach(),
+                new Eggplant()
+            };
             return veggies;
         }
     }

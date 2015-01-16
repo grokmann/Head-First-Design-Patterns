@@ -29,7 +29,12 @@
 
         public IVeggies[] CreateVeggies()
         {
-            IVeggies[] veggies = { new Garlic(), new Onion(), new Mushroom(), new RedPepper() };
+            IVeggies[] veggies = {
+                new Garlic(),
+                new Onion(),
+                new Mushroom(),
+                new RedPepper()
+            };
             return veggies;
         }
     }
