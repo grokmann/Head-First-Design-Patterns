@@ -1,9 +1,24 @@
-﻿namespace Ch4_Factory.Pizzas
+﻿using Ch4_Factory.Ingredients;
+using System;
+
+namespace Ch4_Factory.Pizzas
 {
     class PepperoniPizza : Pizza
    {
-        public PepperoniPizza() {
-            name = "pepperoni";
+        IPizzaIngredientFactory ingredientFactory;
+
+        public PepperoniPizza(IPizzaIngredientFactory ingredientFactory)
+        {
+            this.ingredientFactory = ingredientFactory;
+        }
+
+        public override void Prepare()
+        {
+            Console.WriteLine("Preparing " + name);
+            dough = ingredientFactory.CreateDough();
+            sauce = ingredientFactory.CreateSauce();
+            cheese = ingredientFactory.CreateCheese();
+            pepperoni = ingredientFactory.CreatePepperoni();
         }
     }
 }

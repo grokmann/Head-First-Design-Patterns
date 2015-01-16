@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ingredients\Avocado.cs" />
+    <Compile Include="Ingredients\BeanSprouts.cs" />
     <Compile Include="Ingredients\BlackOlives.cs" />
     <Compile Include="Ingredients\Eggplant.cs" />
     <Compile Include="Ingredients\FreshClams.cs" />
@@ -53,6 +55,7 @@
     <Compile Include="Ingredients\IPizzaIngredientFactory.cs" />
     <Compile Include="Ingredients\ChicagoPizzaIngredientFactory.cs" />
     <Compile Include="Ingredients\ISauce.cs" />
+    <Compile Include="Ingredients\Kale.cs" />
     <Compile Include="Ingredients\MarinaraSauce.cs" />
     <Compile Include="Ingredients\MozzarellaCheese.cs" />
     <Compile Include="Ingredients\Mushroom.cs" />
@@ -63,21 +66,17 @@
     <Compile Include="Ingredients\ReggianoCheese.cs" />
     <Compile Include="Ingredients\SlicedPepperoni.cs" />
     <Compile Include="Ingredients\Spinach.cs" />
+    <Compile Include="Ingredients\SuperThinCrustDough.cs" />
     <Compile Include="Ingredients\ThickCrustDough.cs" />
     <Compile Include="Ingredients\ThinCrustDough.cs" />
-    <Compile Include="Pizzas\CaliforniaStyleCheesePizza.cs" />
-    <Compile Include="Pizzas\ChicagoStyleCheesePizza.cs" />
-    <Compile Include="Pizzas\NYStyleCheesePizza.cs" />
-    <Compile Include="Pizzas\ChicagoStyleVeggiePizza.cs" />
-    <Compile Include="Pizzas\CaliforniaStyleVeggiePizza.cs" />
-    <Compile Include="Pizzas\NYStyleVeggiePizza.cs" />
+    <Compile Include="Ingredients\TofuClams.cs" />
+    <Compile Include="Ingredients\VeganCheese.cs" />
     <Compile Include="Ingredients\Veggies.cs" />
+    <Compile Include="Ingredients\CaliforniaPizzaIngredientFactory.cs" />
     <Compile Include="Pizzerias\CaliforniaStylePizzeria.cs" />
     <Compile Include="Pizzerias\NYStylePizzeria.cs" />
-    <Compile Include="Pizzerias\SimplePizzaFactory.cs" />
     <Compile Include="Pizzerias\ChicagoStylePizzeria.cs" />
     <Compile Include="Pizzas\VeggiePizza.cs" />
-    <Compile Include="Pizzas\GreekPizza.cs" />
     <Compile Include="Pizzas\ClamPizza.cs" />
     <Compile Include="Pizzas\PepperoniPizza.cs" />
     <Compile Include="Pizzas\CheesePizza.cs" />

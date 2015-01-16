@@ -42,9 +42,9 @@ namespace Ch4_Factory.Pizzas
             return name;
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            // code to print pizza here
+            return GetName();
         }
     }
 }

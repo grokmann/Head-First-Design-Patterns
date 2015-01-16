@@ -20,6 +20,6 @@ namespace Ch4_Factory.Pizzerias
             return pizza;
         }
 
-        public abstract Pizza CreatePizza(String pizzaType);
+        protected abstract Pizza CreatePizza(String pizzaType);
     }
 }
