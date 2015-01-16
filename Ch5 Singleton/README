@@ -10,7 +10,7 @@ Indications
 
 New OO Principles
 -------------------
-1. 
+1. None.
 
 Refactoring Steps
 -----
@@ -25,4 +25,5 @@ Refactoring Steps
 
 Lessons
 -------
-* 
+* C#'s and Java's implementation of the Singleton Pattern makes use of a private constructor, a static method combined with a static variable.
+* Examine your performance and resource contraints, and carefully choose an appropriate Singleton implementation for multi-threaded applications.
