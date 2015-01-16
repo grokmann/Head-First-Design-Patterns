@@ -4,6 +4,13 @@ namespace Ch6_Command
 {
     class GarageDoor
     {
+        string location;
+
+        public GarageDoor(string location)
+        {
+            this.location = location;
+        }
+
         public void Up()
         {
             Console.WriteLine("Garage door is up.");

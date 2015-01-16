@@ -2,11 +2,11 @@
 
 namespace Ch6_Command
 {
-    class GarageDoorOpenCommand : ICommand
+    class GarageDoorUpCommand : ICommand
     {
         GarageDoor garageDoor;
 
-        public GarageDoorOpenCommand(GarageDoor garageDoor)
+        public GarageDoorUpCommand(GarageDoor garageDoor)
         {
             this.garageDoor = garageDoor;
         }

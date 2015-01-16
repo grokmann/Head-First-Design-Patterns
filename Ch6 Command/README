@@ -2,7 +2,7 @@
 ===============================
 
 *The Command Pattern* 
-
+The Command Pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue, or log requests, and support undoable operations.
 
 Indications
 -----
@@ -16,6 +16,8 @@ Refactoring Steps
 -----
 * p. 206: Basic elements for RemoteControlTest added: ICommand, SimpleRemoteControl, Light, and LightOnCommand.
 * p. 207: Added GarageDoorOpenCommand.
+* p. 211: remote control = invoker.
+* p. 212-5: Implemented complex remote control and demo.
 
 Lessons
 -------

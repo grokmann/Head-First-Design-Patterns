@@ -2,15 +2,15 @@
 
 namespace Ch6_Command
 {
-    public class RemoteControlTest
+    public class SimpleRemoteControlTest
     {
-        public static void Main(string[] args)
+        public void Test(string[] args)
         {
             SimpleRemoteControl remote = new SimpleRemoteControl();
-            Light light = new Light();
-            GarageDoor garageDoor = new GarageDoor();
+            Light light = new Light("kitchen");
+            GarageDoor garageDoor = new GarageDoor("");
             LightOnCommand lightOn = new LightOnCommand(light);
-            GarageDoorOpenCommand garageOpen = new GarageDoorOpenCommand(garageDoor);
+            GarageDoorUpCommand garageOpen = new GarageDoorUpCommand(garageDoor);
 
             remote.SetCommand(lightOn);
             remote.ButtonWasPressed();
