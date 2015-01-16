@@ -33,6 +33,8 @@ Refactoring Steps
   * Build a factory for each region (subclass IPizzaIngredientFactory).
   * Implement a set of ingredient classes to be used with the factory, shared among regions where appropriate.
   * Work new ingredient factories into old Pizzeria code.
+* p. 151: Reworking Pizza class to use factory-produced ingredients.
+* p. 152-3: Refactored CheesePizza and ClamPizza, injecting dependency on IPizzaIngredientFactory.
 
 Lessons
 -------

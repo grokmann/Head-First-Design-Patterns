@@ -1,25 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using Ch4_Factory.Ingredients;
 
 namespace Ch4_Factory.Pizzas
 {
     public abstract class Pizza
     {
         public string name;
-        public string dough;
-        public string sauce;
-        public List<string> toppings = new List<string>();
 
-        public virtual void Prepare()
-        {
-            Console.WriteLine("Preparing " + name);
-            Console.WriteLine("Tossing dough...");
-            Console.WriteLine("Adding sauce...");
-            Console.WriteLine("Adding toppings...");
-            foreach (var topping in toppings) {
-                Console.WriteLine("\t" + topping);
-            }
-        }
+        public IDough dough;
+        public ISauce sauce;
+        public IVeggies[] veggies;
+        public ICheese cheese;
+        public IPepperoni pepperoni;
+        public IClams clam;
+
+        public abstract void Prepare();
 
         public virtual void Bake()
         {
@@ -36,9 +32,19 @@ namespace Ch4_Factory.Pizzas
             Console.WriteLine("Place pizza in official Pizzeria box");
         }
 
+        public void SetName(string name)
+        {
+            this.name = name;
+        }
+
         public string GetName()
         {
             return name;
+        }
+
+        public string ToString()
+        {
+            // code to print pizza here
         }
     }
 }

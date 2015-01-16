@@ -2,34 +2,34 @@
 {
     public class ChicagoPizzaIngredientFactory : IPizzaIngredientFactory
     {
-        public Cheese CreateCheese()
+        public ICheese CreateCheese()
         {
-            return new MozarellaCheese();
+            return new MozzarellaCheese();
         }
 
-        public Clams CreateClam()
+        public IClams CreateClam()
         {
             return new FrozenClams();
         }
 
-        public Dough CreateDough()
+        public IDough CreateDough()
         {
             return new ThickCrustDough();
         }
 
-        public Pepperoni CreatePepperoni()
+        public IPepperoni CreatePepperoni()
         {
             return new SlicedPepperoni();
         }
 
-        public Sauce CreateSauce()
+        public ISauce CreateSauce()
         {
             return new PlumTomatoSauce();
         }
 
-        public Veggies[] CreateVeggies()
+        public IVeggies[] CreateVeggies()
         {
-            CreateVeggies veggies() = { new BlackOlives(), new Spinach(), new Eggplant() };
+            IVeggies[] veggies = { new BlackOlives(), new Spinach(), new Eggplant() };
             return veggies;
         }
     }
