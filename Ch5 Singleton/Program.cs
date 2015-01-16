@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ch5_Singleton
 {
@@ -10,6 +6,11 @@ namespace Ch5_Singleton
     {
         static void Main(string[] args)
         {
+            ClassicSingleton classicSingleton = ClassicSingleton.GetInstance();
+            classicSingleton = ClassicSingleton.GetInstance();
+            classicSingleton = ClassicSingleton.GetInstance();
+
+            Console.ReadKey();
         }
     }
 }
