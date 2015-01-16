@@ -1,0 +1,49 @@
+﻿Pizza Factory Pattern
+===============================
+
+*The Factory Patterns* 
+*Factory Method Pattern*
+The Factory Method Pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory method lets a class defer instantiation to subclasses. The abstract creator acts on the abstract product. The concrete creators create concrete products.
+
+*Abstract Factory Pattern*
+The Abstract Factory Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+Indications
+-----
+* You need to program to concrete classes, yet you want to manage the change around those classes (keeping the classes closed to modification).
+* Factory Method: Use to decouple your client code from the concrete classes you need to instantiate, or if you don't know ahead of time all the concrete classes you are going to need.
+* Abstract Factory: Use whenever you have families of products you need to create and you wnat to make sure your clients create products that belong together.
+
+New OO Principles
+-------------------
+1. Dependency Inversion Principle: Depend upon abstractions. Do not depend upon concrete classes.
+
+Refactoring Steps
+-----
+* p. 114: Pizza shop makes one type of pizza.
+* p. 114: Need more than one type of pizza... Code is _not_ closed for modification. Have to modify the existing code to add new types of pizza.
+* p. 116: Encapsulate what changes. In this case, it's the creation of the the pizza types. The operations that follow (prepare, bake, etc.) remain the same for all pizzas. This encapsulation is a factory. orderPizza() does not need to know how to assemble a pizza, so it will delegate this action to the SimplePizzaFactory.
+* p. 117: Could define a simple factory as a static method, called a static factory, but could not then subclass and change behavior of the create method.
+* p. 119: HFDP Honorable Mention: This simple factory is _not_ the Factory Pattern, but a programming idiom.
+* p. 121: Franchising! Need two new styles of pizza: New York and Chicago. First the naive way... two new simple factories.
+* p. 122: Moving CreatePizza() to Pizzeria and making both abstract. Each regional pizzeria is going to subclass.
+* p. 125: "...OrderPizza() method in the superclass has no clue which Pizza we are creating;"
+* p. 127: "All the responsibility for instantiating Pizzas has been moved into a *method* that acts as a *factory*."
+* p.145: Guidelines for adhering to Dependency Inversion Principle:
+  * No variable should hold a reference to a concrete class.
+  * No class should derive from a concrete class.
+  * No method should override an implemented method of any of its base classes.
+* p. 146: Need to ensure consistency in ingredients, while allowing for regional differences.
+* p. 148: Solution is using Abstract Factory Pattern for ingredient factories. Three steps:
+  * Build a factory for each region (subclass IPizzaIngredientFactory).
+  * Implement a set of ingredient classes to be used with the factory, shared among regions where appropriate.
+  * Work new ingredient factories into old Pizzeria code.
+* p. 151: Reworking Pizza class to use factory-produced ingredients.
+* p. 152-3: Refactored CheesePizza and ClamPizza, injecting dependency on IPizzaIngredientFactory.
+* p. 160: Factory methods are a natural way to implement your product methods in your abstract factories, e.g. CreateDough().
+
+Lessons
+-------
+* All factories encapsulate object creation.
+* All factory patterns promote loose coupling by reducing the dependency of your application on concrete classes.
+* Factories are a powerful technique for coding to abstractions, not concrete classes.
