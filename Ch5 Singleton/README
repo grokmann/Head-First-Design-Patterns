@@ -15,6 +15,7 @@ Refactoring Steps
 -----
 * p. 175: Classic Singleton uses static method (GetInstance()) to act as gatekeeper to private constructor. Private instance variable (uniqueInstance) holds Singleton once it's created. This pattern has issues that will be addressed later.
 * p. 177: Bad implementation of ChocolateBoiler.
+* p. 178: Refactor ChocolateBoiler to use Singleton Pattern.
 
 Lessons
 -------

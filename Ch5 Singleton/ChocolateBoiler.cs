@@ -10,11 +10,27 @@ namespace Ch5_Singleton
     {
         private bool empty;
         private bool boiled;
+        private static ChocolateBoiler uniqueInstance;
 
-        public ChocolateBoiler()
+        private ChocolateBoiler()
         {
             empty = true;
             boiled = false;
+        }
+
+        public static ChocolateBoiler GetInstance()
+        {
+            if (uniqueInstance == null)
+            {
+                Console.WriteLine("Creating new, unique instance of ChocolateBoiler");
+                uniqueInstance = new ChocolateBoiler();
+            }
+            else
+            {
+                Console.WriteLine("Using the previously created instance of ChocolateBoiler");
+            }
+
+            return uniqueInstance;
         }
 
         public void Fill()
