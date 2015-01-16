@@ -1,0 +1,21 @@
+﻿Singleton Pattern
+===============================
+
+*The Singleton Pattern* 
+
+Indications
+-----
+* You need to ensure one and only one instance of a class is created.
+
+New OO Principles
+-------------------
+1. 
+
+Refactoring Steps
+-----
+* p. 175: Classic Singleton uses static method (GetInstance()) to act as gatekeeper to private constructor. Private instance variable (uniqueInstance) holds Singleton once it's created. This pattern has issues that will be addressed later.
+* p. 177: Bad implementation of ChocolateBoiler.
+
+Lessons
+-------
+* 
