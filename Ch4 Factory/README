@@ -11,7 +11,7 @@ Indications
 
 New OO Principles
 -------------------
-1. 
+1. Dependency Inversion Principle: Depend upon abstractions. Do not depend upon concrete classes.
 
 Refactoring Steps
 -----
@@ -24,6 +24,15 @@ Refactoring Steps
 * p. 122: Moving CreatePizza() to Pizzeria and making both abstract. Each regional pizzeria is going to subclass.
 * p. 125: "...OrderPizza() method in the superclass has no clue which Pizza we are creating;"
 * p. 127: "All the responsibility for instantiating Pizzas has been moved into a *method* that acts as a *factory*."
+* p.145: Guidelines for adhering to Dependency Inversion Principle:
+  * No variable should hold a reference to a concrete class.
+  * No class should derive from a concrete class.
+  * No method should override an implemented method of any of its base classes.
+* p. 146: Need to ensure consistency in ingredients, while allowing for regional differences.
+* p. 148: Adding ingredient factory. Three steps:
+  * Build a factory for each region (subclass IPizzaIngredientFactory).
+  * Implement a set of ingredient classes to be used with the factory, shared among regions where appropriate.
+  * Work new ingredient factories into old Pizzeria code.
 
 Lessons
 -------
