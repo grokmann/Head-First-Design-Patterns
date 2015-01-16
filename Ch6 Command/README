@@ -15,6 +15,7 @@ New OO Principles
 Refactoring Steps
 -----
 * p. 206: Basic elements for RemoteControlTest added: ICommand, SimpleRemoteControl, Light, and LightOnCommand.
+* p. 207: Added GarageDoorOpenCommand.
 
 Lessons
 -------

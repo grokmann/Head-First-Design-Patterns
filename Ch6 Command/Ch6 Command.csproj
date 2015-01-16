@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Command.cs" />
+    <Compile Include="GarageDoor.cs" />
+    <Compile Include="GarageDoorOpenCommand.cs" />
     <Compile Include="Light.cs" />
     <Compile Include="LightOnCommand.cs" />
     <Compile Include="RemoteControlTest.cs" />
