@@ -2,10 +2,11 @@
 ===============================
 
 *The Singleton Pattern* 
+The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it.
 
 Indications
 -----
-* You need to ensure one and only one instance of a class is created.
+* You need to ensure one and only one instance of a class is created, at the time when you need it (lazy instantiation).
 
 New OO Principles
 -------------------
@@ -16,6 +17,7 @@ Refactoring Steps
 * p. 175: Classic Singleton uses static method (GetInstance()) to act as gatekeeper to private constructor. Private instance variable (uniqueInstance) holds Singleton once it's created. This pattern has issues that will be addressed later.
 * p. 177: Bad implementation of ChocolateBoiler.
 * p. 178: Refactor ChocolateBoiler to use Singleton Pattern.
+* p. 181-2: Multi-threading _can_ result in two separate instances. Adding lock (uniqueInstance) to body of GetInstance() will force every thread to wait its turn. Also added _volatile_ keyword to uniqueInstance. Keyword volatile is used as a hint to the compiler that this data member is accessed by multiple threads.
 
 Lessons
 -------

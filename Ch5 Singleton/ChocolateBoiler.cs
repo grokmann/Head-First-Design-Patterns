@@ -10,7 +10,8 @@ namespace Ch5_Singleton
     {
         private bool empty;
         private bool boiled;
-        private static ChocolateBoiler uniqueInstance;
+        // Keyword volatile is used as a hint to the compiler that this data member is accessed by multiple threads.
+        private volatile static ChocolateBoiler uniqueInstance;
 
         private ChocolateBoiler()
         {
@@ -20,17 +21,20 @@ namespace Ch5_Singleton
 
         public static ChocolateBoiler GetInstance()
         {
-            if (uniqueInstance == null)
+            lock (uniqueInstance)
             {
-                Console.WriteLine("Creating new, unique instance of ChocolateBoiler");
-                uniqueInstance = new ChocolateBoiler();
-            }
-            else
-            {
-                Console.WriteLine("Using the previously created instance of ChocolateBoiler");
-            }
+                if (uniqueInstance == null)
+                {
+                    Console.WriteLine("Creating new, unique instance of ChocolateBoiler");
+                    uniqueInstance = new ChocolateBoiler();
+                }
+                else
+                {
+                    Console.WriteLine("Using the previously created instance of ChocolateBoiler");
+                }
 
-            return uniqueInstance;
+                return uniqueInstance;
+            }
         }
 
         public void Fill()
