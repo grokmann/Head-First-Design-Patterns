@@ -15,5 +15,10 @@ namespace Ch6_Command
         {
             ceilingFan.Off();
         }
+
+        public void Undo()
+        {
+            ceilingFan.On();
+        }
     }
 }

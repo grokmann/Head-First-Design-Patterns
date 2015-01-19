@@ -43,10 +43,11 @@
   <ItemGroup>
     <Compile Include="CeilingFan.cs" />
     <Compile Include="CeilingFanOffCommand.cs" />
-    <Compile Include="Command.cs" />
+    <Compile Include="ICommand.cs" />
     <Compile Include="GarageDoor.cs" />
     <Compile Include="CeilingFanOnCommand.cs" />
     <Compile Include="GarageDoorDownCommand.cs" />
+    <Compile Include="RemoteControlWithUndo.cs" />
     <Compile Include="RemoteLoader.cs" />
     <Compile Include="StereoOffCommand.cs" />
     <Compile Include="StereoOnWithCdCommand.cs" />

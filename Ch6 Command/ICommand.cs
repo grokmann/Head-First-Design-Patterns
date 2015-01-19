@@ -2,7 +2,7 @@
 {
     public interface ICommand
     {
-        // a.k.a. orderUp()
         void Execute();
+        void Undo();
     }
 }

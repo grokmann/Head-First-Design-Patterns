@@ -15,5 +15,12 @@ namespace Ch6_Command
         {
             stereo.Off();
         }
+
+        public void Undo()
+        {
+            stereo.On();
+            stereo.SetCd();
+            stereo.SetVolume(11);
+        }
     }
 }

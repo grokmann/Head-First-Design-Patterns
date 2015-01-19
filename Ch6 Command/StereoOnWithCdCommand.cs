@@ -17,5 +17,10 @@ namespace Ch6_Command
             stereo.SetCd();
             stereo.SetVolume(11);
         }
+
+        public void Undo()
+        {
+            stereo.Off();
+        }
     }
 }

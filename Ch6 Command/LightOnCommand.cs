@@ -15,5 +15,10 @@ namespace Ch6_Command
         {
             light.On();
         }
+
+        public void Undo()
+        {
+            light.Off();
+        }
     }
 }

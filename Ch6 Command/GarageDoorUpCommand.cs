@@ -15,5 +15,10 @@ namespace Ch6_Command
         {
             garageDoor.Up();
         }
+
+        public void Undo()
+        {
+            garageDoor.Down();
+        }
     }
 }

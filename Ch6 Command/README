@@ -19,7 +19,13 @@ Refactoring Steps
 * p. 211: remote control = invoker.
 * p. 212-5: Implemented complex remote control and demo.
 * p. 216: Updated NoCommand.
+* p. 218: Adding undo functionality.
+  * Add Undo() to ICommand.
+  * Update LightOnCommand and LightOffCommand to implement Undo().
+  * Create RemoteControlWithUndo.
+  * Added Undo() to all existing commands.
+  * Updated RemoteLoader to use undo.
 
 Lessons
 -------
-* The NoCommand object is an example of a null object, which is useful when you don't have a meaningful object to return, and yet you want to remove from the client the responsibility for handling null. Sometimes Null Object is listed as a design pattern.
+* Pattern Honorable Mention: The NoCommand object is an example of a null object, which is useful when you don't have a meaningful object to return, and yet you want to remove from the client the responsibility for handling null. Sometimes Null Object is listed as a design pattern.

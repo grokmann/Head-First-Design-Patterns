@@ -6,7 +6,7 @@ namespace Ch6_Command
     {
         public static void Main(string[] args)
         {
-            RemoteControl remoteControl = new RemoteControl();
+            RemoteControlWithUndo remoteControl = new RemoteControlWithUndo();
 
             Light livingRoomLight = new Light("Living Room");
             Light kitchenLight = new Light("Kitchen");
@@ -39,6 +39,12 @@ namespace Ch6_Command
             {
                 remoteControl.OnButtonWasPushed(i);
                 remoteControl.OffButtonWasPushed(i);
+                Console.WriteLine(remoteControl);
+                remoteControl.UndoButtonWasPushed();
+                remoteControl.OffButtonWasPushed(i);
+                remoteControl.OnButtonWasPushed(i);
+                Console.WriteLine(remoteControl);
+                remoteControl.UndoButtonWasPushed();
             }
 
             Console.ReadKey();
