@@ -45,10 +45,15 @@
     <Compile Include="CeilingFanLowCommand.cs" />
     <Compile Include="CeilingFanMediumCommand.cs" />
     <Compile Include="CeilingFanOffCommand.cs" />
+    <Compile Include="Hottub.cs" />
+    <Compile Include="HottubOffCommand.cs" />
+    <Compile Include="HottubOnCommand.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="GarageDoor.cs" />
     <Compile Include="CeilingFanHighCommand.cs" />
     <Compile Include="GarageDoorDownCommand.cs" />
+    <Compile Include="TV.cs" />
+    <Compile Include="MacroCommand.cs" />
     <Compile Include="RemoteControlWithUndo.cs" />
     <Compile Include="RemoteLoader.cs" />
     <Compile Include="StereoOffCommand.cs" />
@@ -63,6 +68,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleRemoteControl.cs" />
     <Compile Include="Stereo.cs" />
+    <Compile Include="TVOffCommand.cs" />
+    <Compile Include="TVOnCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

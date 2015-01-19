@@ -29,6 +29,7 @@ Refactoring Steps
   * Added speed to CeilingFan.
   * Added Undo() to CeilingFan commands.
   * Updated RemoteLoader.
+* p. 226-9: Add MacroCommand
 
 Lessons
 -------

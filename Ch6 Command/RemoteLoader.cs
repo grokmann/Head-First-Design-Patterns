@@ -13,6 +13,8 @@ namespace Ch6_Command
             CeilingFan ceilingFan = new CeilingFan("Living Room");
             GarageDoor garageDoor = new GarageDoor("");
             Stereo stereo = new Stereo("Living Room");
+            TV tv = new TV("Living Room");
+            Hottub hottub = new Hottub();
 
             LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
             LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
@@ -29,15 +31,30 @@ namespace Ch6_Command
             StereoOnWithCdCommand stereoOnWithCd = new StereoOnWithCdCommand(stereo);
             StereoOffCommand stereoOff = new StereoOffCommand(stereo);
 
-            remoteControl.SetCommand(0, livingRoomLightOn, livingRoomLightOff);
-            remoteControl.SetCommand(1, kitchenLightOn, kitchenLightOff);
-            remoteControl.SetCommand(2, ceilingFanMedium, ceilingFanOff);
-            remoteControl.SetCommand(3, ceilingFanHigh, ceilingFanOff);
-            remoteControl.SetCommand(4, stereoOnWithCd, stereoOff);
+            TVOnCommand tvOn = new TVOnCommand(tv);
+            TVOffCommand tvOff = new TVOffCommand(tv);
+
+            HottubOnCommand hottubOn = new HottubOnCommand(hottub);
+            HottubOffCommand hottubOff = new HottubOffCommand(hottub);
+
+            ICommand[] partyOn = { livingRoomLightOn, stereoOnWithCd, tvOn, hottubOn };
+            ICommand[] partyOff = { livingRoomLightOff, stereoOff, tvOff, hottubOff };
+
+            MacroCommand partyOnMacro = new MacroCommand(partyOn);
+            MacroCommand partyOffMacro = new MacroCommand(partyOff);
+
+            int slot = 0;
+
+            remoteControl.SetCommand(slot++, livingRoomLightOn, livingRoomLightOff);
+            remoteControl.SetCommand(slot++, kitchenLightOn, kitchenLightOff);
+            remoteControl.SetCommand(slot++, ceilingFanMedium, ceilingFanOff);
+            remoteControl.SetCommand(slot++, ceilingFanHigh, ceilingFanOff);
+            remoteControl.SetCommand(slot++, stereoOnWithCd, stereoOff);
+            remoteControl.SetCommand(slot++, partyOnMacro, partyOffMacro);
 
             Console.WriteLine(remoteControl);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < slot; i++)
             {
                 Console.WriteLine("");
                 remoteControl.OnButtonWasPushed(i);
