@@ -42,10 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CeilingFan.cs" />
+    <Compile Include="CeilingFanLowCommand.cs" />
+    <Compile Include="CeilingFanMediumCommand.cs" />
     <Compile Include="CeilingFanOffCommand.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="GarageDoor.cs" />
-    <Compile Include="CeilingFanOnCommand.cs" />
+    <Compile Include="CeilingFanHighCommand.cs" />
     <Compile Include="GarageDoorDownCommand.cs" />
     <Compile Include="RemoteControlWithUndo.cs" />
     <Compile Include="RemoteLoader.cs" />

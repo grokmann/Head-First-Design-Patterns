@@ -19,12 +19,16 @@ Refactoring Steps
 * p. 211: remote control = invoker.
 * p. 212-5: Implemented complex remote control and demo.
 * p. 216: Updated NoCommand.
-* p. 218: Adding undo functionality.
+* p. 218-21: Adding undo functionality.
   * Add Undo() to ICommand.
   * Update LightOnCommand and LightOffCommand to implement Undo().
   * Create RemoteControlWithUndo.
   * Added Undo() to all existing commands.
   * Updated RemoteLoader to use undo.
+* p. 222-5: Using state to implement Undo
+  * Added speed to CeilingFan.
+  * Added Undo() to CeilingFan commands.
+  * Updated RemoteLoader.
 
 Lessons
 -------

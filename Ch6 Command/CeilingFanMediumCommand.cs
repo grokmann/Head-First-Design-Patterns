@@ -1,11 +1,11 @@
 ﻿namespace Ch6_Command
 {
-    class CeilingFanOffCommand : ICommand
+    class CeilingFanMediumCommand : ICommand
     {
         CeilingFan ceilingFan;
         private int prevSpeed;
 
-        public CeilingFanOffCommand(CeilingFan ceilingFan)
+        public CeilingFanMediumCommand(CeilingFan ceilingFan)
         {
             this.ceilingFan = ceilingFan;
         }
@@ -13,7 +13,7 @@
         public void Execute()
         {
             prevSpeed = ceilingFan.GetSpeed();
-            ceilingFan.Off();
+            ceilingFan.Medium();
         }
 
         public void Undo()

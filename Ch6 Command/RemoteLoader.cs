@@ -19,7 +19,8 @@ namespace Ch6_Command
             LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
             LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
 
-            CeilingFanOnCommand ceilingFanOn = new CeilingFanOnCommand(ceilingFan);
+            CeilingFanMediumCommand ceilingFanMedium = new CeilingFanMediumCommand(ceilingFan);
+            CeilingFanHighCommand ceilingFanHigh = new CeilingFanHighCommand(ceilingFan);
             CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
 
             GarageDoorUpCommand garageDoorUp = new GarageDoorUpCommand(garageDoor);
@@ -30,21 +31,20 @@ namespace Ch6_Command
 
             remoteControl.SetCommand(0, livingRoomLightOn, livingRoomLightOff);
             remoteControl.SetCommand(1, kitchenLightOn, kitchenLightOff);
-            remoteControl.SetCommand(2, ceilingFanOn, ceilingFanOff);
-            remoteControl.SetCommand(3, stereoOnWithCd, stereoOff);
+            remoteControl.SetCommand(2, ceilingFanMedium, ceilingFanOff);
+            remoteControl.SetCommand(3, ceilingFanHigh, ceilingFanOff);
+            remoteControl.SetCommand(4, stereoOnWithCd, stereoOff);
 
             Console.WriteLine(remoteControl);
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
-                remoteControl.OnButtonWasPushed(i);
-                remoteControl.OffButtonWasPushed(i);
-                Console.WriteLine(remoteControl);
-                remoteControl.UndoButtonWasPushed();
-                remoteControl.OffButtonWasPushed(i);
+                Console.WriteLine("");
                 remoteControl.OnButtonWasPushed(i);
                 Console.WriteLine(remoteControl);
                 remoteControl.UndoButtonWasPushed();
+                remoteControl.OffButtonWasPushed(i);
+                remoteControl.OnButtonWasPushed(i);
             }
 
             Console.ReadKey();

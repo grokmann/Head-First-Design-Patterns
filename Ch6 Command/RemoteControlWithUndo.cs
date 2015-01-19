@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace Ch6_Command
 {
@@ -44,6 +45,7 @@ namespace Ch6_Command
 
         public void UndoButtonWasPushed()
         {
+            Console.Write("Undo: ");
             undoCommand.Undo();
         }
 
