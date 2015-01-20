@@ -1,6 +1,6 @@
 ﻿namespace Ch7_Adapter
 {
-    interface ITurkey
+    public interface ITurkey
     {
         void Gobble();
         void Fly();

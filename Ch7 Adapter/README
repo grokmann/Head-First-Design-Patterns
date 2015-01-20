@@ -2,20 +2,25 @@
 ===============================
 
 *The Adapter Pattern* 
-The Adapter Pattern 
+The Adapter Pattern converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
 
 Indications
 -----
 * The existing software system needs to work with a new vendor class library, but the new vendor designed their interfaces differently than the last vendor. Vendors sometimes provide such adapters.
 
-New OO Principles
+OO Principles
 -------------------
-1. None.
+* The Adapter Pattern is full of good OO design principles:
+  * Object composition to wrap the adaptee with an altered interface, which also allows the adapter to be used with an subclass of the adaptee.
+  * Binds the client to an interface, not an implementation.
 
 Refactoring Steps
 -----
-* p. 247: Short on Ducks, so need to create an adapter to use a Turkey.
+* p. 247: Short on Ducks, so need to create an adapter to use a Turkey (TurkeyAdapter).
 
 Lessons
 -------
-* 
+* Could adapt many classes, ro encapsulate all changes in one class.
+* Adapter can hold two or more adaptees, which is why people often confuse the Facade and Adapter Patterns.
+* Can also create a Two-Way Adapter, implementing both interfaces involved.
+* Two kinds of adapters: _object_ adapters and _class_ adapters. Class adaptes are not possible in Java and C#, because multiple inheritance of classes is not allowed (that's what interfaces are for).
