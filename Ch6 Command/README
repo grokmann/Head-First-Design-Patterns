@@ -2,7 +2,7 @@
 ===============================
 
 *The Command Pattern* 
-The Command Pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue, or log requests, and support undoable operations.
+The Command Pattern encapsulates a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
 
 Indications
 -----
@@ -34,3 +34,8 @@ Refactoring Steps
 Lessons
 -------
 * Pattern Honorable Mention: The NoCommand object is an example of a null object, which is useful when you don't have a meaningful object to return, and yet you want to remove from the client the responsibility for handling null. Sometimes Null Object is listed as a design pattern.
+* Need to implement a history of undo? Keep a stack of previous commands. When undo is pressed, invoker pops the first item off the stack and calls its Undo() method.
+* When you use the C.P. (Command Pattern), you end up with a lot of small classes. Can use lambda expressions to simplify this in Java. Does not work in C#, because lambda expressions do not automatically map to Single Abstract Method interfaces.
+* Computations can be packaged and passed around to be invoked by a different thread, which is useful for schedulers, thread pools, and job queues, etc.
+* Logging: C.P. allows system to log all actions and be able to recover after a crash by reinvoking those actions.
+* Transactions: C.P. Allows transactional operations with rollback.
