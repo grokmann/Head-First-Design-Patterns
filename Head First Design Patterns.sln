@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch5 Singleton", "Ch5 Single
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch6 Command", "Ch6 Command\Ch6 Command.csproj", "{302D23EB-9E75-4936-85E9-93F767401F72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch7 Adapter", "Ch7 Adapter\Ch7 Adapter.csproj", "{C1D1C2C0-D7D7-4510-BAEF-129D98ED58C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{302D23EB-9E75-4936-85E9-93F767401F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{302D23EB-9E75-4936-85E9-93F767401F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{302D23EB-9E75-4936-85E9-93F767401F72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D1C2C0-D7D7-4510-BAEF-129D98ED58C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D1C2C0-D7D7-4510-BAEF-129D98ED58C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D1C2C0-D7D7-4510-BAEF-129D98ED58C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D1C2C0-D7D7-4510-BAEF-129D98ED58C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,21 @@
+﻿Adapter Pattern
+===============================
+
+*The Adapter Pattern* 
+The Adapter Pattern 
+
+Indications
+-----
+* The existing software system needs to work with a new vendor class library, but the new vendor designed their interfaces differently than the last vendor. Vendors sometimes provide such adapters.
+
+New OO Principles
+-------------------
+1. None.
+
+Refactoring Steps
+-----
+* p. 247: Short on Ducks, so need to create an adapter to use a Turkey.
+
+Lessons
+-------
+* 
