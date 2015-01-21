@@ -1,0 +1,21 @@
+﻿Template Method Pattern
+===============================
+
+*The Template Method Pattern* 
+
+Indications
+-----
+* 
+
+New OO Principles
+-------------------
+1. 
+
+
+Refactoring Steps
+-----
+* p.285-6: Adding Coffee and Tea. BoilWater() and PourInCup() are the exact same methods for both classes. "When we've got code duplication, that's a good sign we need to clean up the design."
+
+Lessons
+-------
+* 
