@@ -2,32 +2,14 @@
 
 namespace Ch8_Template_Method_Pattern
 {
-    public class Tea
+    public class Tea : CaffeineBeverage
     {
-        public void PrepareRecipe()
-        {
-            BoilWater();
-            SteepTeaBag();
-            PourInCup();
-            AddLemon();
-        }
-
-        public void BoilWater()
-        {
-            Console.WriteLine("Boiling water");
-        }
-
-        public void SteepTeaBag()
+        public override void Brew()
         {
             Console.WriteLine("Steeping the tea");
         }
 
-        public void PourInCup()
-        {
-            Console.WriteLine("Pouring into cup");
-        }
-
-        public void AddLemon()
+        public override void AddCondiments()
         {
             Console.WriteLine("Adding Lemon");
         }

@@ -29,7 +29,5 @@ namespace Ch8_Template_Method_Pattern
         {
             Console.WriteLine("Pouring into cup");
         }
-
-
     }
 }

@@ -2,32 +2,14 @@
 
 namespace Ch8_Template_Method_Pattern
 {
-    public class Coffee
+    public class Coffee : CaffeineBeverage
     {
-        public void PrepareRecipe()
-        {
-            BoilWater();
-            BrewCoffeeGrinds();
-            PourInCup();
-            AddSugarAndMilk();
-        }
-
-        public void BoilWater()
-        {
-            Console.WriteLine("Boiling water");
-        }
-
-        public void BrewCoffeeGrinds()
+        public override void Brew()
         {
             Console.WriteLine("Dripping Coffee through filter");
         }
 
-        public void PourInCup()
-        {
-            Console.WriteLine("Pouring into cup");
-        }
-
-        public void AddSugarAndMilk()
+        public override void AddCondiments()
         {
             Console.WriteLine("Adding Sugar and Milk");
         }

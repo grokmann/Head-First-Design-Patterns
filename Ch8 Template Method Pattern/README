@@ -14,7 +14,8 @@ New OO Principles
 
 Refactoring Steps
 -----
-* p.285-6: Adding Coffee and Tea. BoilWater() and PourInCup() are the exact same methods for both classes.
+* p. 285-6: Adding Coffee and Tea. BoilWater() and PourInCup() are the exact same methods for both classes.
+* p. 290-3: Abstracting PrepareRecipe(). Added CaffeineBeverage superclass.
 
 Lessons
 -------
