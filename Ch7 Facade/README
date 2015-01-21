@@ -1,0 +1,33 @@
+﻿Facade Pattern
+===============================
+
+*The Facade Pattern* provides a unified interace toa  set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+
+Indications
+-----
+* You have several subsystems that need to be used in a standard way and you want to hide their complexity, but also maintain direct access to the subsystems.
+
+New OO Principles
+-------------------
+1. Principle of Least Knowledge (a.k.a. Law of Demeter): Talk only to your immediate friends.
+
+
+Refactoring Steps
+-----
+* 
+
+Lessons
+-------
+* Facades don't encapsulate the subsystem classes; they merely provide a simplified interface to their functionality. The subsystem classes still remain available for direct use.
+* Facades can add their own "smarts" in addition to making use of the subsystem.
+* Can have multiple facades for the same subsystem, if needed.
+* Facade also decouples the client implementation from any one subsystem.
+* The _difference_ between Facade and Adapter Patterns is not number of classes involved, but the intent: Facades simplify, adapters convert.
+* Principle of Least Knowledge (PoLK) in practice. From any method in an object, the principle tells us that we should only invoke methods that belong to:
+  * The object itself
+  * Objects passed in as a parameter to the method
+  * Any object the method creates or instantiates
+  * Any components of the object (HAS-A relationship)
+* PoLK tells us not to call methods on objects that were returned from calling other methods! Doing so tightly couples three or more objects.
+* Applying PoLK results in more "wrapper" classes, which can result in increased complexity and development time as well as decreased runtime performance.
+* HomeTheaterTestDrive has one friend, HomeTheaterFacade. In O.O. programming, having only one friend is a *good* thing!
