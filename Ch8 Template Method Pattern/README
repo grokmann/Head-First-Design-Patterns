@@ -14,8 +14,8 @@ New OO Principles
 
 Refactoring Steps
 -----
-* p.285-6: Adding Coffee and Tea. BoilWater() and PourInCup() are the exact same methods for both classes. "When we've got code duplication, that's a good sign we need to clean up the design."
+* p.285-6: Adding Coffee and Tea. BoilWater() and PourInCup() are the exact same methods for both classes.
 
 Lessons
 -------
-* 
+* When we've got code duplication, that's a good sign we need to clean up the design.
