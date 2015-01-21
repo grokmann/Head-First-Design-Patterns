@@ -10,6 +10,13 @@ namespace Ch8_Template_Method_Pattern
     {
         static void Main(string[] args)
         {
+            Tea myTea = new Tea();
+            Coffee myCoffee = new Coffee();
+
+            myTea.PrepareRecipe();
+            myCoffee.PrepareRecipe();
+
+            Console.ReadKey();
         }
     }
 }

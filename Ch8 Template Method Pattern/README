@@ -1,11 +1,12 @@
 ﻿Template Method Pattern
 ===============================
 
-*The Template Method Pattern* 
+*The Template Method Pattern* defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets su subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 
 Indications
 -----
-* 
+* You have duplicated code due to a common algorithm or process.
+* You want to enforce a standard process or algorithm, while allowing flexibility in one or more steps. 
 
 New OO Principles
 -------------------
@@ -16,7 +17,9 @@ Refactoring Steps
 -----
 * p. 285-6: Adding Coffee and Tea. BoilWater() and PourInCup() are the exact same methods for both classes.
 * p. 290-3: Abstracting PrepareRecipe(). Added CaffeineBeverage superclass.
+* p. 294: PrepareRecipe() is our _template method_.
 
 Lessons
 -------
 * When we've got code duplication, that's a good sign we need to clean up the design.
+* A template method is a method that serves as a template for an algorithm. Some methods are handled by the superclass class, and some are handled by the subclasses.
