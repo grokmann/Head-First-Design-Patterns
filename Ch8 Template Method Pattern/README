@@ -29,3 +29,4 @@ Lessons
 * A hook can provide a subclass the ability to make a decision for the abstract class.
 * The Hollywood Principle prevents dependency rot. With the Hollywood Principle, we allow low-level components to hook themselves into a system, but the high-level components determine when they are needed, and how.
 * Implementing CompareTo() for IComparable is an example of the Template Method Pattern.
+* Strategy vs. Template Method: In Strategy, the class that you compose with implements the _entire_ algorithm_.
