@@ -10,7 +10,7 @@ Indications
 
 New OO Principles
 -------------------
-1. 
+1. The Hollywood Principle: Don't call us, we'll call you.
 
 
 Refactoring Steps
@@ -18,8 +18,14 @@ Refactoring Steps
 * p. 285-6: Adding Coffee and Tea. BoilWater() and PourInCup() are the exact same methods for both classes.
 * p. 290-3: Abstracting PrepareRecipe(). Added CaffeineBeverage superclass.
 * p. 294: PrepareRecipe() is our _template method_.
+* p. 299-30?: Adding a hook.
+* p. 309-12: Adding comparable Duck.
 
 Lessons
 -------
 * When we've got code duplication, that's a good sign we need to clean up the design.
 * A template method is a method that serves as a template for an algorithm. Some methods are handled by the superclass class, and some are handled by the subclasses.
+* A _hook_ is a method that is declared in the abstract class, but only given an empty or default implementation. This gives subclasses the ability to "hook into" the algorithm at verious points, if they wish; a subclass is free to ignore the hook.
+* A hook can provide a subclass the ability to make a decision for the abstract class.
+* The Hollywood Principle prevents dependency rot. With the Hollywood Principle, we allow low-level components to hook themselves into a system, but the high-level components determine when they are needed, and how.
+* Implementing CompareTo() for IComparable is an example of the Template Method Pattern.

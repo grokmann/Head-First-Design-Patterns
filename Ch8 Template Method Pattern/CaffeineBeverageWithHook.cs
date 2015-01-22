@@ -2,14 +2,18 @@
 
 namespace Ch8_Template_Method_Pattern
 {
-    public abstract class CaffeineBeverage
+    public abstract class CaffeineBeverageWithHook
     {
         public void PrepareRecipe()
         {
             BoilWater();
             Brew();
             PourInCup();
-            AddCondiments();
+            if (CustomerWantsCondiments())
+            {
+                AddCondiments();
+            }
+            Console.WriteLine("Beverage is ready! 8u)");
         }
 
         public abstract void Brew();
@@ -24,6 +28,11 @@ namespace Ch8_Template_Method_Pattern
         public void PourInCup()
         {
             Console.WriteLine("Pouring into cup");
+        }
+
+        public virtual bool CustomerWantsCondiments()
+        {
+            return true;
         }
     }
 }

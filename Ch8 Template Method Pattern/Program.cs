@@ -12,9 +12,15 @@ namespace Ch8_Template_Method_Pattern
         {
             Tea myTea = new Tea();
             Coffee myCoffee = new Coffee();
+            CoffeeWithHook myCoffeeWithHook = new CoffeeWithHook();
 
             myTea.PrepareRecipe();
             myCoffee.PrepareRecipe();
+
+            Console.WriteLine("\nMaking coffee with hook...");
+            myCoffeeWithHook.PrepareRecipe();
+
+            DuckSortTestDrive.Run();
 
             Console.ReadKey();
         }
