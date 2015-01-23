@@ -41,11 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alice.cs" />
     <Compile Include="DinerMenu.cs" />
     <Compile Include="MenuItem.cs" />
     <Compile Include="PancakeHouseMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IWaitress.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
