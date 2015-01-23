@@ -1,0 +1,23 @@
+﻿Iterator Pattern
+===============================
+
+*The Iterator Pattern* 
+
+Indications
+-----
+* You have objects in a collection the clients want to iterate over, but you don't want the clients to have access to the implementation.
+
+New OO Principles
+-------------------
+1. 
+
+
+Refactoring Steps
+-----
+* p. 324-5: The Diner and Pancake Houses agree on the MenuItem class...
+* p. 326-7: ...but each has implemented the menu differently. The Pancake House uses ArrayList, and the Diner uses Array, and each have menu methods dependent on their own implementations.
+* p. 328: The Java-enabled waitress has a specification which can be achieved using the Iteration Pattern.
+
+Lessons
+-------
+* 
