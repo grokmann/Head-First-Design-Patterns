@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Ch9_Iterator
 {
-    public class Alice : IWaitress
+    public class Waitress : IWaitress
     {
         public bool IsItemVegetarian(string name)
         {
@@ -22,23 +22,23 @@ namespace Ch9_Iterator
 
         public void PrintMenu()
         {
-            PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
-            ArrayList breakfastItems = pancakeHouseMenu.GetMenuItems();
+            PancakeHouseMenu breakfastMenu= new PancakeHouseMenu();
+            DinerMenu lunchMenu = new DinerMenu();
 
-            DinerMenu dinerMenu = new DinerMenu();
-            MenuItem[] lunchItems = dinerMenu.GetMenuItems();
+            Iterator breakfastItems = breakfastMenu.CreateIterator();
+            Iterator lunchItems = lunchMenu.CreateIterator();
 
-            for (int i = 0; i < breakfastItems.Count; i++)
+            while (breakfastItems.HasNext())
             {
-                MenuItem menuItem = (MenuItem)breakfastItems[i];
+                MenuItem menuItem = breakfastItems.Next();
                 Console.Write(menuItem.GetName() + " ");
                 Console.WriteLine(menuItem.GetPrice() + " ");
                 Console.WriteLine(menuItem.GetDescription() + " ");
             }
 
-            for (int i = 0; i < breakfastItems.Count; i++)
+            while (lunchItems.HasNext())
             {
-                MenuItem menuItem = lunchItems[i];
+                MenuItem menuItem = lunchItems.Next();
                 Console.Write(menuItem.GetName() + " ");
                 Console.WriteLine(menuItem.GetPrice() + " ");
                 Console.WriteLine(menuItem.GetDescription() + " ");
