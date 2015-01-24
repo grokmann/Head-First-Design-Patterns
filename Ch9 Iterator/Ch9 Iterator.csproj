@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu.cs" />
+    <Compile Include="MenuTestDrive.cs" />
+    <Compile Include="PancakeHouseMenuIterator.cs" />
     <Compile Include="DinerMenuIterator.cs" />
     <Compile Include="Iterator.cs" />
     <Compile Include="Waitress.cs" />

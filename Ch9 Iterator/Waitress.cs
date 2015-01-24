@@ -5,6 +5,37 @@ namespace Ch9_Iterator
 {
     public class Waitress : IWaitress
     {
+        PancakeHouseMenu pancakeHouseMenu;
+        DinerMenu dinerMenu;
+
+        public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu)
+        {
+            this.pancakeHouseMenu = pancakeHouseMenu;
+            this.dinerMenu = dinerMenu;
+        }
+
+        public void PrintMenu()
+        {
+            Iterator pancakeIterator = pancakeHouseMenu.CreateIterator();
+            Iterator dinerIterator = dinerMenu.CreateIterator();
+
+            Console.WriteLine("MENU\n----\nBREAKFAST");
+            PrintMenu(pancakeIterator);
+            Console.WriteLine("\nLUNCH");
+            PrintMenu(dinerIterator);
+        }
+
+        private void PrintMenu(Iterator iterator)
+        {
+            while (iterator.HasNext())
+            {
+                MenuItem menuItem = (MenuItem)iterator.Next();
+                Console.Write(menuItem.GetName() + ", ");
+                Console.Write(menuItem.GetPrice() + " -- ");
+                Console.WriteLine(menuItem.GetDescription());
+            }
+        }
+
         public bool IsItemVegetarian(string name)
         {
             throw new NotImplementedException();
@@ -18,31 +49,6 @@ namespace Ch9_Iterator
         public void PrintLunchMenu()
         {
             throw new NotImplementedException();
-        }
-
-        public void PrintMenu()
-        {
-            PancakeHouseMenu breakfastMenu= new PancakeHouseMenu();
-            DinerMenu lunchMenu = new DinerMenu();
-
-            Iterator breakfastItems = breakfastMenu.CreateIterator();
-            Iterator lunchItems = lunchMenu.CreateIterator();
-
-            while (breakfastItems.HasNext())
-            {
-                MenuItem menuItem = breakfastItems.Next();
-                Console.Write(menuItem.GetName() + " ");
-                Console.WriteLine(menuItem.GetPrice() + " ");
-                Console.WriteLine(menuItem.GetDescription() + " ");
-            }
-
-            while (lunchItems.HasNext())
-            {
-                MenuItem menuItem = lunchItems.Next();
-                Console.Write(menuItem.GetName() + " ");
-                Console.WriteLine(menuItem.GetPrice() + " ");
-                Console.WriteLine(menuItem.GetDescription() + " ");
-            }
         }
 
         public void PrintVegetarianMenu()

@@ -20,6 +20,12 @@ Refactoring Steps
 * p. 329: GetMenuItems() requires two loops. If another restaurant with a different implementation is acquired then we'll have _three_ loops.
 * p. 331: Even with a for loop, Waitress still needs to know about the type of each menu. Need to decouple the Waitress from the concrete implementations of the menus completely.
 * p. 332: Encapsulate what varies: in this case, that's the iteration over MenuItems.
+* p. 333-5: Implenting the Iterator Pattern. Added Iterator interface and DinerMenuIterator.
+* p. 336: Added CreateIterator() to DinerMenu. Did same updates for PancakeHouseMenu.
+* p. 337: Reworked Waitress to use Iterator interface. For C#, need to explicitly cast (MenuItem) returned by Iterator.Next().
+* p. 338: Test drive it.
+* p. 339: Waitress is still bound to two concrete Menu classes...
+* p. 341: HFDP switches to Java's Iterator interface. C# doesn't have anything that maps directly. Could use IEnumerator<MenuItem>, but I've decided it's not worth my bothering.
 
 Lessons
 -------

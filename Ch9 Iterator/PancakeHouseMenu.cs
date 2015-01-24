@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Ch9_Iterator
 {
@@ -38,11 +39,10 @@ namespace Ch9_Iterator
             menuItems.Add(menuItem);
         }
 
-        public ArrayList GetMenuItems()
+        internal Iterator CreateIterator()
         {
-            return menuItems;
+            return new PancakeHouseMenuIterator(menuItems);
         }
-
         //other menu methods here depending on ArrayList implementation
     }
 }

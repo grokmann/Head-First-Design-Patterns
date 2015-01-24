@@ -1,13 +1,13 @@
-﻿using System;
+﻿using System.Collections;
 
 namespace Ch9_Iterator
 {
-    public class DinerMenuIterator : Iterator
+    public class PancakeHouseMenuIterator : Iterator
     {
-        MenuItem[] items;
+        ArrayList items;
         int position = 0;
 
-        public DinerMenuIterator(MenuItem[] items)
+        public PancakeHouseMenuIterator(ArrayList items)
         {
             this.items = items;
         }
@@ -21,7 +21,7 @@ namespace Ch9_Iterator
 
         public bool HasNext()
         {
-            if (position >= items.Length)
+            if (position >= items.Count)
             {
                 return false;
             }
