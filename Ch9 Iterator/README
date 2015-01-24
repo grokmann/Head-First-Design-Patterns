@@ -26,6 +26,7 @@ Refactoring Steps
 * p. 338: Test drive it.
 * p. 339: Waitress is still bound to two concrete Menu classes...
 * p. 341: HFDP switches to Java's Iterator interface. C# doesn't have anything that maps directly. Could use IEnumerator<MenuItem>, but I've decided it's not worth my bothering. Instead, added generic type to Iterator interface (Iterator<T>). Did not implement Remove().
+* p. 351: Added CafeMenu.
 
 Lessons
 -------
