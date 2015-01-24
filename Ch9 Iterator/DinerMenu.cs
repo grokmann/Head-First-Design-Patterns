@@ -57,7 +57,7 @@ namespace Ch9_Iterator
             }
         }
 
-        public Iterator CreateIterator()
+        public Iterator<MenuItem> CreateIterator()
         {
             return new DinerMenuIterator(menuItems);
         }

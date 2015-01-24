@@ -16,8 +16,8 @@ namespace Ch9_Iterator
 
         public void PrintMenu()
         {
-            Iterator pancakeIterator = pancakeHouseMenu.CreateIterator();
-            Iterator dinerIterator = dinerMenu.CreateIterator();
+            Iterator<MenuItem> pancakeIterator = pancakeHouseMenu.CreateIterator();
+            Iterator<MenuItem> dinerIterator = dinerMenu.CreateIterator();
 
             Console.WriteLine("MENU\n----\nBREAKFAST");
             PrintMenu(pancakeIterator);
@@ -25,11 +25,11 @@ namespace Ch9_Iterator
             PrintMenu(dinerIterator);
         }
 
-        private void PrintMenu(Iterator iterator)
+        private void PrintMenu(Iterator<MenuItem> iterator)
         {
             while (iterator.HasNext())
             {
-                MenuItem menuItem = (MenuItem)iterator.Next();
+                MenuItem menuItem = iterator.Next();
                 Console.Write(menuItem.GetName() + ", ");
                 Console.Write(menuItem.GetPrice() + " -- ");
                 Console.WriteLine(menuItem.GetDescription());

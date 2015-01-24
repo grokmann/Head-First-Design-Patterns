@@ -2,7 +2,7 @@
 
 namespace Ch9_Iterator
 {
-    public class DinerMenuIterator : Iterator
+    public class DinerMenuIterator : Iterator<MenuItem>
     {
         MenuItem[] items;
         int position = 0;
@@ -12,7 +12,7 @@ namespace Ch9_Iterator
             this.items = items;
         }
 
-        public object Next()
+        public MenuItem Next()
         {
             MenuItem menuItem = (MenuItem)items[position];
             position = position + 1;

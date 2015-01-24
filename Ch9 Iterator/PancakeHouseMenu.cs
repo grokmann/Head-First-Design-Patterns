@@ -39,7 +39,7 @@ namespace Ch9_Iterator
             menuItems.Add(menuItem);
         }
 
-        internal Iterator CreateIterator()
+        internal Iterator<MenuItem> CreateIterator()
         {
             return new PancakeHouseMenuIterator(menuItems);
         }
