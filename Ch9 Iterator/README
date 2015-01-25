@@ -28,6 +28,8 @@ Refactoring Steps
 * p. 341: HFDP switches to Java's Iterator interface. C# doesn't have anything that maps directly. Could use IEnumerator<MenuItem>, but I've decided it's not worth my bothering. Instead, added generic type to Iterator interface (Iterator<T>). Did not implement Remove().
 * p. 351: Added CafeMenu. Used List<MenuItem> in CafeMenuIterator with help of LINQ.
 * p. 359: Waitress's three calls to PrintMenu() looks ugly. Plus, adding a new menu will lead to violation of the Open Closed Principle. Time to fix this.
+* p. 360: Decided to use IList and foreach for the menus collection, instead of create a new iterator. Jon Skeet offered a [rough-coded IIterator on StackOverflow](http://stackoverflow.com/a/1273050/249411), which provides a Java Iterator-type interface for C#.
+* p. 360: Lost the names of the menus. May add to menus later.
 
 Lessons
 -------

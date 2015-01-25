@@ -1,33 +1,26 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Ch9_Iterator
 {
     public class Waitress : IWaitress
     {
-        Menu pancakeHouseMenu;
-        Menu dinerMenu;
-        Menu cafeMenu;
+        IList<Menu> menus;
 
-        public Waitress(Menu pancakeHouseMenu, Menu dinerMenu, Menu cafeMenu)
+        public Waitress(IList<Menu> menus)
         {
-            this.pancakeHouseMenu = pancakeHouseMenu;
-            this.dinerMenu = dinerMenu;
-            this.cafeMenu = cafeMenu;
+            this.menus = menus;
         }
 
         public void PrintMenu()
         {
-            Iterator<MenuItem> pancakeIterator = pancakeHouseMenu.CreateIterator();
-            Iterator<MenuItem> dinerIterator = dinerMenu.CreateIterator();
-            Iterator<MenuItem> cafeIterator = cafeMenu.CreateIterator();
+            IList<Menu> menuIterator = menus;
 
-            Console.WriteLine("MENU\n----\nBREAKFAST");
-            PrintMenu(pancakeIterator);
-            Console.WriteLine("\nLUNCH");
-            PrintMenu(dinerIterator);
-            Console.WriteLine("\nDINNER");
-            PrintMenu(cafeIterator);
+            foreach (var menu in menus)
+            {
+                PrintMenu(menu.CreateIterator());
+            }
         }
 
         private void PrintMenu(Iterator<MenuItem> iterator)

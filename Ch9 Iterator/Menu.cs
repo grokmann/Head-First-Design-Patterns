@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Ch9_Iterator
+﻿namespace Ch9_Iterator
 {
     public interface Menu
     {
