@@ -5,24 +5,29 @@ namespace Ch9_Iterator
 {
     public class Waitress : IWaitress
     {
-        PancakeHouseMenu pancakeHouseMenu;
-        DinerMenu dinerMenu;
+        Menu pancakeHouseMenu;
+        Menu dinerMenu;
+        Menu cafeMenu;
 
-        public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu)
+        public Waitress(Menu pancakeHouseMenu, Menu dinerMenu, Menu cafeMenu)
         {
             this.pancakeHouseMenu = pancakeHouseMenu;
             this.dinerMenu = dinerMenu;
+            this.cafeMenu = cafeMenu;
         }
 
         public void PrintMenu()
         {
             Iterator<MenuItem> pancakeIterator = pancakeHouseMenu.CreateIterator();
             Iterator<MenuItem> dinerIterator = dinerMenu.CreateIterator();
+            Iterator<MenuItem> cafeIterator = cafeMenu.CreateIterator();
 
             Console.WriteLine("MENU\n----\nBREAKFAST");
             PrintMenu(pancakeIterator);
             Console.WriteLine("\nLUNCH");
             PrintMenu(dinerIterator);
+            Console.WriteLine("\nDINNER");
+            PrintMenu(cafeIterator);
         }
 
         private void PrintMenu(Iterator<MenuItem> iterator)

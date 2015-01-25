@@ -26,7 +26,8 @@ Refactoring Steps
 * p. 338: Test drive it.
 * p. 339: Waitress is still bound to two concrete Menu classes...
 * p. 341: HFDP switches to Java's Iterator interface. C# doesn't have anything that maps directly. Could use IEnumerator<MenuItem>, but I've decided it's not worth my bothering. Instead, added generic type to Iterator interface (Iterator<T>). Did not implement Remove().
-* p. 351: Added CafeMenu.
+* p. 351: Added CafeMenu. Used List<MenuItem> in CafeMenuIterator with help of LINQ.
+* p. 359: Waitress's three calls to PrintMenu() looks ugly. Plus, adding a new menu will lead to violation of the Open Closed Principle. Time to fix this.
 
 Lessons
 -------
