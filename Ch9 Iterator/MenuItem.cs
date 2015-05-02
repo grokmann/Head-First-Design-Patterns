@@ -1,6 +1,8 @@
-﻿namespace Ch9_Iterator
+﻿using System;
+
+namespace Ch9_Iterator
 {
-    public class MenuItem
+    public class MenuItem : MenuComponent
     {
         string name;
         string description;
@@ -36,6 +38,17 @@
         public bool IsVegetarian()
         {
             return vegetarian;
+        }
+
+        public void Print()
+        {
+            Console.Write("\t" + GetName());
+            if (IsVegetarian())
+            {
+                Console.Write(" (v) ");
+            }
+            Console.WriteLine(", " + GetPrice());
+            Console.WriteLine("\t-- " + GetDescription());
         }
     }
 }
