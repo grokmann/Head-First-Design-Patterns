@@ -2,6 +2,7 @@
 ===============================
 
 *The Iterator Pattern* provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+*The Composite Pattern* allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
 Indications
 -----
@@ -32,6 +33,12 @@ Refactoring Steps
 * p. 360: Lost the names of the menus. May add to menus later.
 * p. 361: Feature Request: Dessert menus! Need to add sub-menus.
 * p. 362: The chef's implementation is limiting the flexibility. It is time to refactor the implementation.
+* p. 363-4: Requirements:
+	- Accomodate menus, sub-menus, and menu items (via a tree-shaped structure).
+	- Can continue to conveniently traverse each item as the Iterator Pattern allows.
+	- Can traverse flexibly, e.g. only the dessert menu or just the diner's menus.
+	How do we handle these requirements? The Composite Pattern.
+
 
 Lessons
 -------
