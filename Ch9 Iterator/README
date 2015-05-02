@@ -30,6 +30,8 @@ Refactoring Steps
 * p. 359: Waitress's three calls to PrintMenu() looks ugly. Plus, adding a new menu will lead to violation of the Open Closed Principle. Time to fix this.
 * p. 360: Decided to use IList and foreach for the menus collection, instead of create a new iterator. Jon Skeet offered a [rough-coded IIterator on StackOverflow](http://stackoverflow.com/a/1273050/249411), which provides a Java Iterator-type interface for C#.
 * p. 360: Lost the names of the menus. May add to menus later.
+* p. 361: Feature Request: Dessert menus! Need to add sub-menus.
+* p. 362: The chef's implementation is limiting the flexibility. It is time to refactor the implementation.
 
 Lessons
 -------
