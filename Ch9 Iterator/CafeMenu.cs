@@ -2,7 +2,7 @@
 
 namespace Ch9_Iterator
 {
-    class CafeMenu : Menu
+    class CafeMenu
     {
         Hashtable menuItems = new Hashtable();
 

@@ -45,7 +45,7 @@ namespace Ch9_Iterator
             Console.Write("\t" + GetName());
             if (IsVegetarian())
             {
-                Console.Write(" (v) ");
+                Console.Write(" (v)");
             }
             Console.WriteLine(", " + GetPrice());
             Console.WriteLine("\t-- " + GetDescription());

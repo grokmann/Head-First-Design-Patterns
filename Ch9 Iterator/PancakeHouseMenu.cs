@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Ch9_Iterator
 {
-    public class PancakeHouseMenu : Menu
+    public class PancakeHouseMenu
     {
         ArrayList menuItems;
 

@@ -2,7 +2,7 @@
 
 namespace Ch9_Iterator
 {
-    public class DinerMenu : Menu
+    public class DinerMenu
     {
         static readonly int MAX_ITEMS = 6;
         int numberOfItems = 0;
