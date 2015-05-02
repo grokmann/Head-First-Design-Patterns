@@ -8,42 +8,42 @@ namespace Ch9_Iterator
 {
     public abstract class MenuComponent
     {
-        public void Add(MenuComponent menuComponent)
+        public virtual void Add(MenuComponent menuComponent)
         {
             throw new NotSupportedException();
         }
 
-        public void Remove(MenuComponent menuComponent)
+        public virtual void Remove(MenuComponent menuComponent)
         {
             throw new NotSupportedException();
         }
 
-        public MenuComponent GetChild(int index)
+        public virtual MenuComponent GetChild(int index)
         {
             throw new NotSupportedException();
         }
 
-        public string GetName()
+        public virtual string GetName()
         {
             throw new NotSupportedException();
         }
 
-        public string GetDescription()
+        public virtual string GetDescription()
         {
             throw new NotSupportedException();
         }
 
-        public double GetPrice()
+        public virtual double GetPrice()
         {
             throw new NotSupportedException();
         }
 
-        public bool IsVegetarian()
+        public virtual bool IsVegetarian()
         {
             throw new NotSupportedException();
         }
 
-        public void Print()
+        public virtual void Print()
         {
             throw new NotSupportedException();
         }

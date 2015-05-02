@@ -20,27 +20,27 @@ namespace Ch9_Iterator
             this.price = price;
         }
 
-        public string GetName()
+        public override string GetName()
         {
             return name;
         }
 
-        public string GetDescription()
+        public override string GetDescription()
         {
             return description;
         }
 
-        public double GetPrice()
+        public override double GetPrice()
         {
             return price;
         }
 
-        public bool IsVegetarian()
+        public override bool IsVegetarian()
         {
             return vegetarian;
         }
 
-        public void Print()
+        public override void Print()
         {
             Console.Write("\t" + GetName());
             if (IsVegetarian())
