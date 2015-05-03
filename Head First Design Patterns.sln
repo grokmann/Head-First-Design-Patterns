@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch8 Template Method Pattern
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch9 Iterator", "Ch9 Iterator\Ch9 Iterator.csproj", "{8D5801B2-F04E-4347-9AAD-75B0CC1220CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch10 State", "Ch10 State\Ch10 State.csproj", "{9BACF541-62E3-42B7-B1EE-2E7A5AA5988C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +94,10 @@ Global
 		{8D5801B2-F04E-4347-9AAD-75B0CC1220CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D5801B2-F04E-4347-9AAD-75B0CC1220CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D5801B2-F04E-4347-9AAD-75B0CC1220CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BACF541-62E3-42B7-B1EE-2E7A5AA5988C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BACF541-62E3-42B7-B1EE-2E7A5AA5988C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BACF541-62E3-42B7-B1EE-2E7A5AA5988C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BACF541-62E3-42B7-B1EE-2E7A5AA5988C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
