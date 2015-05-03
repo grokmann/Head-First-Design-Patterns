@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,26 +14,11 @@ namespace Ch9_Iterator
             this.items = items.Values.OfType<MenuItem>().ToList<MenuItem>();
         }
 
-        object IEnumerator.Current
+        public MenuItem Next()
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        MenuItem IEnumerator<MenuItem>.Current
-        {
-            get
-            {
-                MenuItem menuItem = items[position];
-                return menuItem;
-            }
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
+            MenuItem menuItem = items[position];
+            position = position + 1;
+            return menuItem;
         }
 
         public bool HasNext()
@@ -47,24 +31,6 @@ namespace Ch9_Iterator
             {
                 return true;
             }
-        }
-
-        public bool MoveNext()
-        {
-            if (position >= items.Count)
-            {
-                return false;
-            }
-            else
-            {
-                position = position + 1;
-                return true;
-            }
-        }
-
-        public void Reset()
-        {
-            position = 0;
         }
     }
 }

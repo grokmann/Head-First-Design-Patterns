@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-
-namespace Ch9_Iterator
+﻿namespace Ch9_Iterator
 {
-    public interface Iterator<T> : IEnumerator<T>
+    public interface Iterator<T>
     {
-        
+        bool HasNext();
+        T Next();
     }
 }
