@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace Ch9_Iterator
 {
@@ -7,12 +8,28 @@ namespace Ch9_Iterator
         MenuItem[] items;
         int position = 0;
 
-        public DinerMenuIterator(MenuItem[] items)
+        public MenuItem Current
         {
-            this.items = items;
+            get
+            {
+                throw new NotImplementedException();
+            }
         }
 
-        public MenuItem Next()
+        object IEnumerator.Current
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public DinerMenuIterator(MenuItem[] items)
+        {
+            MenuItem menuItem = (MenuItem)items[position];
+        }
+
+        public MenuItem MoveNext()
         {
             MenuItem menuItem = (MenuItem)items[position];
             position = position + 1;
@@ -29,6 +46,29 @@ namespace Ch9_Iterator
             {
                 return true;
             }
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IEnumerator.MoveNext()
+        {
+            if (position >= items.Length)
+            {
+                return false;
+            }
+            else
+            {
+                position = position + 1;
+                return true;
+            }
+        }
+
+        public void Reset()
+        {
+            throw new NotImplementedException();
         }
     }
 }

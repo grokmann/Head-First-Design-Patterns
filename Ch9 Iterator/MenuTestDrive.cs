@@ -69,6 +69,12 @@ namespace Ch9_Iterator
                 true,
                 1.59));
 
+            pancakeHouseMenu.Add(new MenuItem(
+                "Garbage Manhole Cover",
+                "A tiny pancake for the whole family with everything the family loves",
+                true,
+                4.59));
+
             Waitress waitress = new Waitress(allMenus);
 
             waitress.PrintMenu();
