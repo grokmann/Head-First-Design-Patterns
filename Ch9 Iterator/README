@@ -2,15 +2,23 @@
 ===============================
 
 *The Iterator Pattern* provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
-*The Composite Pattern* allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
 Indications
 -----
 * You have objects in a collection the clients want to iterate over, but you don't want the clients to have access to the implementation.
 
+Composite Pattern
+===============================
+
+*The Composite Pattern* allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+
+Indications
+-----
+* You have collections of objects with whole-part relationships and you want to be able to treat those objects uniformly. Composites (nodes with children) and leaves (terminating nodes) have the same methods.
+
 New OO Principles
 -------------------
-1. A class should have only one reason to change.
+1. Single Responsibility Principle: A class should have only one reason to change.
 
 
 Refactoring Steps
@@ -39,6 +47,10 @@ Refactoring Steps
 	- Can traverse flexibly, e.g. only the dessert menu or just the diner's menus.
 	How do we handle these requirements? The Composite Pattern.
 * p. 375: Great comments on this page. This design is a trade-off. It is trading the Single Responsibility Principle for transparency. Composites and leaf nodes become transparent to the client. "...you can always shift your perspective and see a leaf as a node with zero children." :-)
+* p. 377: The Composite Iterator. Decided not to implement. Takes iterators and throws them on an internal stack to traverse the tree.
+* p. 380: The Null Iterator: Another example of the Null Object "Design Pattern". Two choices for MenuItem's response to createIterator():
+	# Return null. Requires client to handle.
+	# Return an iterator that always returns false when hasNext() is called. Lazy--punts every time.
 
 
 Lessons

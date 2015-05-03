@@ -19,6 +19,12 @@ namespace Ch9_Iterator
 
             // add menu items here
 
+            pancakeHouseMenu.Add(new MenuItem(
+                "Garbage Manhole Cake",
+                "Everything goes in. Fun for the whole family.",
+                true,
+                3.59));
+
             dinerMenu.Add(new MenuItem(
                 "Pasta",
                 "Spaghetti with Marinara Sauce, and a slice of sourdough bread",
