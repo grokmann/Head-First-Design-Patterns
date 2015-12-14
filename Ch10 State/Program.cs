@@ -7,6 +7,7 @@ namespace Ch10_State
     {
         static void Main(string[] args)
         {
+            GumballMachineTestDrive.RunTests();
             Console.ReadKey();
         }
     }
