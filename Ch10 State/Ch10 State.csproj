@@ -45,6 +45,8 @@
     <Compile Include="GumballMachineTestDrive.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="States\IState.cs" />
+    <Compile Include="States\NoQuarterState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

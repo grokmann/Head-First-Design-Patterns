@@ -14,7 +14,12 @@ New OO Principles
 
 Refactoring Steps
 -----
-* p. 394: ...
+* p. 394: The initial code is very procedural/imperative.
+* p. 402: Change request to add 1 in 10 winner of free gumball. Need to encapsulate what changes and apply the open-closed principle. Rework to encapsulate state objects in their own classes and then delegate to the current state when an action occurs.
+	1. Define a State interface with a method for every action in the Gumball Machine.
+	2. Implement a State class for every state.
+	3. Get rid of conditional code and delegate work to State classes.
+	
 
 Lessons
 -------
