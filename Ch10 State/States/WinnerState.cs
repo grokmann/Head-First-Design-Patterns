@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ch10_State.States
 {
-    class WinnerState : BaseState, IState
+    class WinnerState : IState
     {
-        public WinnerState(GumballMachine gumballMachine)
-            : base(gumballMachine)
-        {
+        GumballMachine gumballMachine;
 
+        public WinnerState(GumballMachine gumballMachine)
+        {
+            this.gumballMachine = gumballMachine;
         }
 
         public void InsertQuarter()

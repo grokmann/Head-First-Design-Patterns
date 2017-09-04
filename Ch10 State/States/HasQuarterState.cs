@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ch10_State.States
 {
-    public class HasQuarterState : BaseState, IState
+    public class HasQuarterState : IState
     {
-        public HasQuarterState(GumballMachine gumballMachine) : base(gumballMachine)
+        GumballMachine gumballMachine;
+
+        public HasQuarterState(GumballMachine gumballMachine)
         {
+            this.gumballMachine = gumballMachine;
         }
         
         public void InsertQuarter()
@@ -19,7 +22,7 @@ namespace Ch10_State.States
 
         public void EjectQuarter()
         {
-            Console.WriteLine("Your quarter has been returned.");
+            Console.WriteLine("Quarter returned");
             gumballMachine.SetState(gumballMachine.GetNoQuarterState());
         }
 
@@ -27,12 +30,11 @@ namespace Ch10_State.States
         {
             Console.WriteLine("You turned..."); 
             gumballMachine.SetState(gumballMachine.GetSoldState());
-            gumballMachine.dispense(); 
         }
 
         public void Dispense()
         {
-            Console.WriteLine("You haven't turned the crank.");
+            Console.WriteLine("No gumball dispensed");
         }
     }
 }

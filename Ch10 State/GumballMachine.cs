@@ -15,15 +15,16 @@ namespace Ch10_State
         IState soldState;
 
         IState state;
+
         int count = 0;
 
         public GumballMachine(int numberGumballs)
         {
-            soldOutState =  new SoldOutState(this);
+            soldOutState = new SoldOutState(this);
             noQuarterState = new NoQuarterState(this);
             hasQuarterState = new HasQuarterState(this);
             soldState = new SoldState(this);
-            
+
             this.count = numberGumballs;
             if (numberGumballs > 0)
             {
@@ -40,9 +41,19 @@ namespace Ch10_State
             state.InsertQuarter();
         }
 
+        internal void ReleaseBall()
+        {
+            throw new NotImplementedException();
+        }
+
         public void ejectQuarter()
         {
             state.EjectQuarter();
+        }
+
+        internal IState getNoQuarterState()
+        {
+            throw new NotImplementedException();
         }
 
         public void turnCrank()
@@ -51,23 +62,18 @@ namespace Ch10_State
             state.Dispense();
         }
 
-        public void dispense()
+        internal void SetState(IState state)
         {
-            if (state == SOLD)
-            {
-                Console.WriteLine("A gumball comes rolling out the slot");
-                count = count - 1;
-                if (count == 0)
-                {
-                    Console.WriteLine("Oops, out of gumballs!");
-                    state = SOLD_OUT;
-                }
-                else
-                {
-                    state = NO_QUARTER;
-                }
-            }
+            this.state = state;
+        }
 
+        void releaseBall()
+        {
+            Console.WriteLine("A gumball comes rolling out the slot…");
+            if (count != 0)
+            {
+                count -= 1;
+            }
         }
 
         public override string ToString()
@@ -75,41 +81,40 @@ namespace Ch10_State
             var builder = new StringBuilder();
             builder.AppendLine("Mighty Gumball, Inc.");
             builder.AppendLine("C-Sharp-enabled Standing Gumball Model #2015");
-            builder.AppendFormat("Inventory: {0} gumballs\r\n", count);
-            if (state == SOLD_OUT) { builder.AppendLine("Machine is sold out"); }
-            else if (state == HAS_QUARTER) { builder.AppendLine("Machine is waiting for crank to turn"); }
-            else if (state == NO_QUARTER || state == SOLD ) { builder.AppendLine("Machine is waiting for quarter"); }
+            builder.AppendFormat("Inventory: {0} gumball\r\n", count);
+
+            if (count != 1)
+            {
+                builder.Append("s");
+            }
+
+            builder.AppendLine();
+            builder.AppendFormat("Machine is {0}", state);
 
             return builder.ToString();
         }
-        // other methods here like toString() and refill()
 
-        internal object GetHasQuarterState()
+        public IState GetHasQuarterState()
         {
             throw new NotImplementedException();
         }
 
-        internal void SetState(object p)
+        public IState GetNoQuarterState()
         {
             throw new NotImplementedException();
         }
 
-        internal object GetNoQuarterState()
+        public IState GetSoldState()
         {
             throw new NotImplementedException();
         }
 
-        internal object GetSoldState()
+        internal int getCount()
         {
             throw new NotImplementedException();
         }
 
-        internal int inventoryCount()
-        {
-            throw new NotImplementedException();
-        }
-
-        internal object GetSoldOutState()
+        public IState GetSoldOutState()
         {
             throw new NotImplementedException();
         }

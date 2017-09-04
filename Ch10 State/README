@@ -16,10 +16,17 @@ New OO Principles
 Refactoring Steps
 -----
 * p. 394: The initial code is very procedural/imperative.
-* p. 402: Change request to add 1 in 10 winner of free gumball. Need to encapsulate what changes and apply the open-closed principle. Rework to encapsulate state objects in their own classes and then delegate to the current state when an action occurs.
+* p. 402: Change request to add 1 in 10 winner of free gumball. 
+* p. 404: "This code would make a FORTRAN programmer proud." ☺
+* p. 405: Frank & Judy's plan:
+	* Try to localize behavior for each state: "encapsulate what varies." 
+	* Put each state's behavior in its own class—then each state can implement its own actions. 
+	* Maybe Gumball Machine can delegate to the state object that represents the current state: "favor composition."
+* p. 406: The New Design
 	1. Define a State interface with a method for every action in the Gumball Machine.
-	2. Implement a State class for every state.
+	2. Implement a State class for every state, which will be responsible for behavior of machine when in the corresponding state.
 	3. Get rid of conditional code and delegate work to State classes.
+* p. 411: Complete GumballMachine class.
 	
 
 Lessons

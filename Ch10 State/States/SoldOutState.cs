@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace Ch10_State.States
 {
-    public class SoldOutState : BaseState, IState
+    public class SoldOutState : IState
     {
-        public SoldOutState(GumballMachine gumballMachine) : base(gumballMachine) { }
-        
+        GumballMachine gumballMachine;
+
+        public SoldOutState(GumballMachine gumballMachine)
+        {
+            this.gumballMachine = gumballMachine;
+        }
+
         public void InsertQuarter()
         {
             Console.WriteLine("You can't insert a quarter, the machine is sold out");

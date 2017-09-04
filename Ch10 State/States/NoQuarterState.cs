@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace Ch10_State.States
 {
-    public class NoQuarterState : BaseState, IState
+    public class NoQuarterState : IState
     {
-        public NoQuarterState(GumballMachine gumballMachine) : base(gumballMachine)
+        GumballMachine gumballMachine;
+
+        public NoQuarterState(GumballMachine gumballMachine)
         {
+            this.gumballMachine = gumballMachine;
         }
 
         public void InsertQuarter()
         {
-            gumballMachine.SetState(gumballMachine.GetHasQuarterState());
             Console.WriteLine("You inserted a quarter");
+            gumballMachine.SetState(gumballMachine.GetHasQuarterState());
         }
 
         public void EjectQuarter()

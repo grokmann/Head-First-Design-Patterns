@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace Ch10_State.States
 {
-    public class SoldState : BaseState, IState
+    public class SoldState : IState
     {
-        public SoldState(GumballMachine gumballMachine) : base(gumballMachine)
-        {
-        }
+        GumballMachine gumballMachine;
 
+        public SoldState(GumballMachine gumballMachine)
+        {
+            this.gumballMachine = gumballMachine;
+        }
+        
         public void InsertQuarter()
         {
             Console.WriteLine("Please wait, we're already giving you a gumball.");
@@ -29,14 +32,14 @@ namespace Ch10_State.States
 
         public void Dispense()
         {
-            Console.WriteLine("A gumball comes rolling out the slot");
-            count = count - 1;
-            if (gumballMachine.inventoryCount() > 0)
+            gumballMachine.ReleaseBall();
+            if (gumballMachine.getCount() > 0)
             {
-                gumballMachine.SetState(gumballMachine.GetNoQuarterState());
+                gumballMachine.SetState(gumballMachine.getNoQuarterState());
             }
             else
             {
+                Console.WriteLine("Oops, out of gumballs!");
                 gumballMachine.SetState(gumballMachine.GetSoldOutState());
             }
         }
