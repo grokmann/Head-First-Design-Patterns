@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22310.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch1 Strategy", "Strategy\Ch1 Strategy.csproj", "{2D069544-0D7A-40EF-A9E8-88131EE3F6E7}"
 EndProject
@@ -15,8 +15,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch2 Observer.IObservable", "Ch2 Observer.IObservable\Ch2 Observer.IObservable.csproj", "{7D0E97E4-F743-469B-8779-361C29490465}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch3 Decorator", "Ch3 Decorator\Ch3 Decorator.csproj", "{0D8E05E9-9D86-4F67-8D0E-5597EBA60403}"
-EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.modelproj", "{E8960089-1D53-430C-8F68-A5C1C044E542}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch3 Decorator.IO", "Ch3 Decorator.IO\Ch3 Decorator.IO.csproj", "{C90ADA3B-6DAB-4F1D-B4A8-019B7B3DCC89}"
 EndProject
@@ -58,10 +56,6 @@ Global
 		{0D8E05E9-9D86-4F67-8D0E-5597EBA60403}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D8E05E9-9D86-4F67-8D0E-5597EBA60403}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D8E05E9-9D86-4F67-8D0E-5597EBA60403}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E8960089-1D53-430C-8F68-A5C1C044E542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E8960089-1D53-430C-8F68-A5C1C044E542}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E8960089-1D53-430C-8F68-A5C1C044E542}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E8960089-1D53-430C-8F68-A5C1C044E542}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C90ADA3B-6DAB-4F1D-B4A8-019B7B3DCC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C90ADA3B-6DAB-4F1D-B4A8-019B7B3DCC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C90ADA3B-6DAB-4F1D-B4A8-019B7B3DCC89}.Release|Any CPU.ActiveCfg = Release|Any CPU

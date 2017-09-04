@@ -5,7 +5,8 @@
 
 Indications
 -----
-* ...
+* A system has behavior that changes depending on conditions.
+* Need flexibility to add additional behaviors in the future.
 
 New OO Principles
 -------------------
