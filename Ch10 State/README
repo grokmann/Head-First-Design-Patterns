@@ -1,12 +1,14 @@
 ﻿State Pattern
 ===============================
 
-*The State Pattern* ...
+*The State Pattern* allows an object to alter its behavior
+when its internal state changes. The object will appear to
+change its class.
 
 Indications
 -----
 * A system has behavior that changes depending on conditions.
-* Need flexibility to add additional behaviors in the future.
+* You need the flexibility to add additional behaviors in the future.
 
 New OO Principles
 -------------------
@@ -27,7 +29,19 @@ Refactoring Steps
 	2. Implement a State class for every state, which will be responsible for behavior of machine when in the corresponding state.
 	3. Get rid of conditional code and delegate work to State classes.
 * p. 411: Complete GumballMachine class.
-	
+* p. 418: State Pattern definition and class diagram.
+	* The Context is the class that can have a number of internal states, e.g. GumballMachine.
+* p. 419: Class diagrams for the Strategy and State Patterns are the same. They vary in _intent_.
+	* State Pattern
+		- Set of behaviors encapsulated in state objects, which context delegates to.
+		_ The client usually knows very little, if anything, about the state objects.
+		- An alternative to putting lots of conditionals in your context.
+	* Strategy Pattern
+		- The client usually specifies the strategy object that the context is composed with.
+		- While the pattern provides the flexibility to change the strategy at runtime, often there is a strategy object that is most appropriate for a context object.
+		- A flexible alternative to subclassing.
+* p. 420: Q&A
+	* When the state transitions are fixed, they are appropriate for putting in the Context; when transitions are more dynamic, typically placed in concrete state classes themselves. The designer is deciding which classess are closed for modification—the Context or the state classes—as the system evolves.
 
 Lessons
 -------
