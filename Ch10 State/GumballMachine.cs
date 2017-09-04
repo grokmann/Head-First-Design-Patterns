@@ -41,19 +41,9 @@ namespace Ch10_State
             state.InsertQuarter();
         }
 
-        internal void ReleaseBall()
-        {
-            throw new NotImplementedException();
-        }
-
         public void ejectQuarter()
         {
             state.EjectQuarter();
-        }
-
-        internal IState getNoQuarterState()
-        {
-            throw new NotImplementedException();
         }
 
         public void turnCrank()
@@ -62,26 +52,12 @@ namespace Ch10_State
             state.Dispense();
         }
 
-        internal void SetState(IState state)
-        {
-            this.state = state;
-        }
-
-        void releaseBall()
-        {
-            Console.WriteLine("A gumball comes rolling out the slot…");
-            if (count != 0)
-            {
-                count -= 1;
-            }
-        }
-
         public override string ToString()
         {
             var builder = new StringBuilder();
             builder.AppendLine("Mighty Gumball, Inc.");
             builder.AppendLine("C-Sharp-enabled Standing Gumball Model #2015");
-            builder.AppendFormat("Inventory: {0} gumball\r\n", count);
+            builder.AppendFormat("Inventory: {0} gumball", count);
 
             if (count != 1)
             {
@@ -94,29 +70,43 @@ namespace Ch10_State
             return builder.ToString();
         }
 
+        internal void SetState(IState state)
+        {
+            this.state = state;
+        }
+
+        internal void ReleaseBall()
+        {
+            Console.WriteLine("A gumball comes rolling out the slot…");
+            if (count != 0)
+            {
+                count -= 1;
+            }
+        }
+
+        internal int GetCount()
+        {
+            return count;
+        }
+
         public IState GetHasQuarterState()
         {
-            throw new NotImplementedException();
+            return this.hasQuarterState;
         }
 
         public IState GetNoQuarterState()
         {
-            throw new NotImplementedException();
+            return this.noQuarterState;
         }
 
         public IState GetSoldState()
         {
-            throw new NotImplementedException();
-        }
-
-        internal int getCount()
-        {
-            throw new NotImplementedException();
+            return this.soldState;
         }
 
         public IState GetSoldOutState()
         {
-            throw new NotImplementedException();
+            return this.soldOutState;
         }
     }
 }

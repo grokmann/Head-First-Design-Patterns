@@ -33,9 +33,9 @@ namespace Ch10_State.States
         public void Dispense()
         {
             gumballMachine.ReleaseBall();
-            if (gumballMachine.getCount() > 0)
+            if (gumballMachine.GetCount() > 0)
             {
-                gumballMachine.SetState(gumballMachine.getNoQuarterState());
+                gumballMachine.SetState(gumballMachine.GetNoQuarterState());
             }
             else
             {
