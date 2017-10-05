@@ -30,5 +30,10 @@ namespace Ch10_State.States
         {
             Console.WriteLine("No gumball dispensed");
         }
+
+        public void Refill()
+        {
+            gumballMachine.SetState(gumballMachine.GetNoQuarterState());
+        }
     }
 }

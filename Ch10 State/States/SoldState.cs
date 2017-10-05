@@ -35,8 +35,13 @@ namespace Ch10_State.States
             }
             else
             {
-                gumballMachine.SetState(gumballMachine.GetOutOfGumballsState());
+                gumballMachine.SetState(gumballMachine.GetSoldOutState());
             }
+        }
+
+        public void Refill()
+        {
+            gumballMachine.SetState(gumballMachine.GetNoQuarterState());
         }
     }
 }

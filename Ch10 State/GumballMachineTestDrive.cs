@@ -31,6 +31,7 @@ namespace Ch10_State
             gumballMachine.turnCrank();
             gumballMachine.insertQuarter();
             gumballMachine.turnCrank();
+            gumballMachine.Refill(15);
             gumballMachine.insertQuarter();
             gumballMachine.turnCrank();
             gumballMachine.ejectQuarter();

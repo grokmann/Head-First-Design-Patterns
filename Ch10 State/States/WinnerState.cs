@@ -50,5 +50,10 @@ namespace Ch10_State.States
             }
 
         }
+
+        public void Refill()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -40,5 +40,10 @@ namespace Ch10_State.States
         {
             Console.WriteLine("No gumball dispensed");
         }
+
+        public void Refill()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

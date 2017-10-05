@@ -31,5 +31,10 @@ namespace Ch10_State.States
         {
             Console.WriteLine("You need to pay first");
         }
+
+        public void Refill()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
