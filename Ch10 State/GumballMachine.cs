@@ -13,6 +13,7 @@ namespace Ch10_State
         IState noQuarterState;
         IState hasQuarterState;
         IState soldState;
+        IState winnerState;
 
         IState state;
 
@@ -24,6 +25,7 @@ namespace Ch10_State
             noQuarterState = new NoQuarterState(this);
             hasQuarterState = new HasQuarterState(this);
             soldState = new SoldState(this);
+            winnerState = new WinnerState(this);
 
             this.count = numberGumballs;
             if (numberGumballs > 0)
@@ -107,6 +109,11 @@ namespace Ch10_State
         public IState GetSoldOutState()
         {
             return this.soldOutState;
+        }
+
+        public IState GetWinnerState()
+        {
+            return this.winnerState;
         }
     }
 }

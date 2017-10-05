@@ -32,7 +32,27 @@ namespace Ch10_State.States
 
         public void Dispense()
         {
-            throw new NotImplementedException();
+            gumballMachine.ReleaseBall();
+
+            if (gumballMachine.GetCount() == 0)
+            {
+                gumballMachine.SetState(gumballMachine.GetSoldOutState());
+            }
+            else
+            {
+                gumballMachine.ReleaseBall();
+                Console.WriteLine("YOU'RE A WINNER! You got two gumballs for your quarter");
+                if (gumballMachine.GetCount() > 0)
+                {
+                    gumballMachine.SetState(gumballMachine.GetNoQuarterState());
+                }
+                else
+                {
+                    Console.WriteLine("Oops, out of gumballs!");
+                    gumballMachine.SetState(gumballMachine.GetSoldOutState());
+                }
+            }
+
         }
     }
 }

@@ -41,7 +41,15 @@ Refactoring Steps
 		- While the pattern provides the flexibility to change the strategy at runtime, often there is a strategy object that is most appropriate for a context object.
 		- A flexible alternative to subclassing.
 * p. 420: Q&A
-	* When the state transitions are fixed, they are appropriate for putting in the Context; when transitions are more dynamic, typically placed in concrete state classes themselves. The designer is deciding which classess are closed for modification—the Context or the state classes—as the system evolves.
+	* When the state transitions are fixed, they are appropriate for putting in the Context; when transitions are more dynamic, they are typically placed in state classes themselves. The creator is deciding which classess are closed for modification—the Context or the state classes—as the system evolves.
+	* By using objects to manage state, you make states explicit and reduce the effort needed to understand and maintain your code.
+* p. 422: Simple to add a new state: WinnerState.
+* p. 422: By keeping WinnerState logic separate from SoldState, we adhere to the principle of "one class, one responsibility."
+* p.425 Crucial questions:
+	* Should we make State an abstract class to build in default behavior?
+	* Dispense() method always called. We could make turnCrank() return a boolean (yay) or introduce exceptions (boo).
+	* Move logic for state transitions to gumball machine?
+	* Many gumball machine objects? May want to move state instances into static instance variables and share them.
 
 Lessons
 -------
