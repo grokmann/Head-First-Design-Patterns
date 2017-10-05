@@ -15,6 +15,8 @@ namespace Ch10_State
         IState soldState;
         IState winnerState;
 
+        IState outOfGumballsState;
+
         IState state;
 
         int count = 0;
@@ -26,8 +28,10 @@ namespace Ch10_State
             hasQuarterState = new HasQuarterState(this);
             soldState = new SoldState(this);
             winnerState = new WinnerState(this);
+            outOfGumballsState = new OutOfGumballsState(this);
 
             this.count = numberGumballs;
+
             if (numberGumballs > 0)
             {
                 state = noQuarterState;
@@ -91,6 +95,12 @@ namespace Ch10_State
             return count;
         }
 
+        internal void Refill(int numberOfGumballs)
+        {
+            count = numberOfGumballs;
+            Console.WriteLine("Refilling: {0} gumballs added!", numberOfGumballs);
+        }
+
         public IState GetHasQuarterState()
         {
             return this.hasQuarterState;
@@ -114,6 +124,11 @@ namespace Ch10_State
         public IState GetWinnerState()
         {
             return this.winnerState;
+        }
+
+        public IState GetOutOfGumballsState()
+        {
+            return this.outOfGumballsState;
         }
     }
 }

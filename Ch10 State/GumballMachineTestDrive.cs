@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ch10_State
 {
@@ -27,6 +23,12 @@ namespace Ch10_State
             
             Console.WriteLine(gumballMachine + CrLf);
             
+            gumballMachine.insertQuarter();
+            gumballMachine.turnCrank();
+            gumballMachine.insertQuarter();
+            gumballMachine.turnCrank();
+            gumballMachine.insertQuarter();
+            gumballMachine.turnCrank();
             gumballMachine.insertQuarter();
             gumballMachine.turnCrank();
             gumballMachine.insertQuarter();

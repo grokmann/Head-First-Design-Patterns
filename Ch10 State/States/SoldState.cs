@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ch10_State.States
 {
@@ -39,8 +35,7 @@ namespace Ch10_State.States
             }
             else
             {
-                Console.WriteLine("Oops, out of gumballs!");
-                gumballMachine.SetState(gumballMachine.GetSoldOutState());
+                gumballMachine.SetState(gumballMachine.GetOutOfGumballsState());
             }
         }
     }
