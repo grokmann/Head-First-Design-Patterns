@@ -3,34 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch1 Strategy", "Strategy\Ch1 Strategy.csproj", "{2D069544-0D7A-40EF-A9E8-88131EE3F6E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch01 Strategy", "Strategy\Ch01 Strategy.csproj", "{2D069544-0D7A-40EF-A9E8-88131EE3F6E7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{47221B5B-E4BE-41A8-A60F-5306786E55AB}"
 	ProjectSection(SolutionItems) = preProject
 		README.txt = README.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch2 Observer", "Ch2 Observer\Ch2 Observer.csproj", "{416399DC-33C4-4936-B439-F72917EF162F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch02 Observer", "Ch2 Observer\Ch02 Observer.csproj", "{416399DC-33C4-4936-B439-F72917EF162F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch2 Observer.IObservable", "Ch2 Observer.IObservable\Ch2 Observer.IObservable.csproj", "{7D0E97E4-F743-469B-8779-361C29490465}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch02 Observer.IObservable", "Ch2 Observer.IObservable\Ch02 Observer.IObservable.csproj", "{7D0E97E4-F743-469B-8779-361C29490465}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch3 Decorator", "Ch3 Decorator\Ch3 Decorator.csproj", "{0D8E05E9-9D86-4F67-8D0E-5597EBA60403}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03 Decorator", "Ch3 Decorator\Ch03 Decorator.csproj", "{0D8E05E9-9D86-4F67-8D0E-5597EBA60403}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch3 Decorator.IO", "Ch3 Decorator.IO\Ch3 Decorator.IO.csproj", "{C90ADA3B-6DAB-4F1D-B4A8-019B7B3DCC89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch03 Decorator.IO", "Ch3 Decorator.IO\Ch03 Decorator.IO.csproj", "{C90ADA3B-6DAB-4F1D-B4A8-019B7B3DCC89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch4 Factory", "Ch4 Factory\Ch4 Factory.csproj", "{FF892E21-AFC8-43AC-9903-6BB231F32A22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch04 Factory", "Ch4 Factory\Ch04 Factory.csproj", "{FF892E21-AFC8-43AC-9903-6BB231F32A22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch5 Singleton", "Ch5 Singleton\Ch5 Singleton.csproj", "{89284021-9F3B-4AE2-9B9B-4C94FC13F1E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch05 Singleton", "Ch5 Singleton\Ch05 Singleton.csproj", "{89284021-9F3B-4AE2-9B9B-4C94FC13F1E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch6 Command", "Ch6 Command\Ch6 Command.csproj", "{302D23EB-9E75-4936-85E9-93F767401F72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch06 Command", "Ch6 Command\Ch06 Command.csproj", "{302D23EB-9E75-4936-85E9-93F767401F72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch7 Adapter", "Ch7 Adapter\Ch7 Adapter.csproj", "{C1D1C2C0-D7D7-4510-BAEF-129D98ED58C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch07 Adapter", "Ch7 Adapter\Ch07 Adapter.csproj", "{C1D1C2C0-D7D7-4510-BAEF-129D98ED58C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch7 Facade", "Ch7 Facade\Ch7 Facade.csproj", "{8E740AB3-A2F3-4928-9522-514CF5213113}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch07 Facade", "Ch7 Facade\Ch07 Facade.csproj", "{8E740AB3-A2F3-4928-9522-514CF5213113}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch8 Template Method Pattern", "Ch8 Template Method Pattern\Ch8 Template Method Pattern.csproj", "{68EA1DAF-F7AC-438F-A260-6184CEA1BE9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch08 Template Method Pattern", "Ch8 Template Method Pattern\Ch08 Template Method Pattern.csproj", "{68EA1DAF-F7AC-438F-A260-6184CEA1BE9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch9 Iterator", "Ch9 Iterator\Ch9 Iterator.csproj", "{8D5801B2-F04E-4347-9AAD-75B0CC1220CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch09 Iterator", "Ch9 Iterator\Ch09 Iterator.csproj", "{8D5801B2-F04E-4347-9AAD-75B0CC1220CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch10 State", "Ch10 State\Ch10 State.csproj", "{9BACF541-62E3-42B7-B1EE-2E7A5AA5988C}"
 EndProject
